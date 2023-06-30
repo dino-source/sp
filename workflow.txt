@@ -1,0 +1,8 @@
+1. git pull
+2. write some code
+3. git add <filename>
+4. git commit
+5. Write commit message in text editor (neovim in our case)
+6. Save & quit text editor
+7. git push
+8. go to github.com and make sure that new commits are there
