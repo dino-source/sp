@@ -12,16 +12,23 @@
 // ing function, also called twice, should produce the remaining output.
 
 #include <iostream>
+#include <string>
 
 void output_message_about_three_blind_mice(); // function prototype
 void output_message_about_how_mice_run();   // function prototype
 
+void output(const std::string &message); // function prototype
+
 int main()
 {
-    output_message_about_three_blind_mice(); // function call
-    output_message_about_three_blind_mice(); // function call
-    output_message_about_how_mice_run();    // function call
-    output_message_about_how_mice_run();    // function call
+   // output_message_about_three_blind_mice(); // function call
+   // output_message_about_three_blind_mice(); // function call
+   // output_message_about_how_mice_run();    // function call
+   // output_message_about_how_mice_run();    // function call
+   output("Three blind mice!\n");
+   output("Three blind mice!\n");
+   output("See how they run!\n");
+   output("See how they run!\n");
 }
 
 void output_message_about_three_blind_mice()    // function definition
@@ -32,4 +39,9 @@ void output_message_about_three_blind_mice()    // function definition
 void output_message_about_how_mice_run()    // function definition
 {
     std::cout << "See how they run\n";
+}
+
+void output(const std::string &message)
+{
+    std::cout << message;
 }
