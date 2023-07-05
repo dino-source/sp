@@ -10,3 +10,26 @@
 // See how they run
 // One function, called two times, should produce the first two lines, and the remain-
 // ing function, also called twice, should produce the remaining output.
+
+#include <iostream>
+
+void output_message_about_three_blind_mice(); // function prototype
+void output_message_about_how_mice_run();   // function prototype
+
+int main()
+{
+    output_message_about_three_blind_mice(); // function call
+    output_message_about_three_blind_mice(); // function call
+    output_message_about_how_mice_run();    // function call
+    output_message_about_how_mice_run();    // function call
+}
+
+void output_message_about_three_blind_mice()    // function definition
+{
+    std::cout << "Three blind mice\n";
+}
+
+void output_message_about_how_mice_run()    // function definition
+{
+    std::cout << "See how they run\n";
+}
