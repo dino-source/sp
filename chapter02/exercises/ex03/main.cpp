@@ -16,18 +16,22 @@
 
 void output_message_about_three_blind_mice(); // function declaration (function prototype)
 void output_message_about_how_mice_run();     // function declaration (function prototype)
-void output(const std::string &message);      // function declaration (function prototype)
+void output(const std::string &message, char delimiter = ';');      // function declaration (function prototype)
 
 int main()
 {
-   output_message_about_three_blind_mice();   // function call
-   output_message_about_three_blind_mice();   // function call
-   output_message_about_how_mice_run();       // function call
-   output_message_about_how_mice_run();       // function call
-   output("Three blind mice!\n");             // function call
-   output("Three blind mice!\n");             // function call
-   output("See how they run!\n");             // function call
-   output("See how they run!\n");             // function call
+//    output_message_about_three_blind_mice();   // function call
+//    output_message_about_three_blind_mice();   // function call
+//    output_message_about_how_mice_run();       // function call
+//    output_message_about_how_mice_run();       // function call
+   output("Three blind mice!");             // function call
+   output("Three blind mice!");             // function call
+   output("See how they run!");             // function call
+   output("See how they run!");             // function call
+   output("All you need is love!", '@');
+   output("All you need is love!", '@');
+   output("All you need is love!", '@');
+   output("All you need is love!", '@');
 }
 
 void output_message_about_three_blind_mice()  // function definition
@@ -40,7 +44,7 @@ void output_message_about_how_mice_run()      // function definition
     std::cout << "See how they run\n";
 }
 
-void output(const std::string &message)       // function definition
+void output(const std::string &message, char delimiter)       // function definition
 {
-    std::cout << message;
+    std::cout << message << delimiter;
 }
