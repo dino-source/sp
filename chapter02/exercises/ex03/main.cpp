@@ -14,34 +14,33 @@
 #include <iostream>
 #include <string>
 
-void output_message_about_three_blind_mice(); // function prototype
-void output_message_about_how_mice_run();   // function prototype
-
-void output(const std::string &message); // function prototype
+void output_message_about_three_blind_mice(); // function declaration (function prototype)
+void output_message_about_how_mice_run();     // function declaration (function prototype)
+void output(const std::string &message);      // function declaration (function prototype)
 
 int main()
 {
-   // output_message_about_three_blind_mice(); // function call
-   // output_message_about_three_blind_mice(); // function call
-   // output_message_about_how_mice_run();    // function call
-   // output_message_about_how_mice_run();    // function call
-   output("Three blind mice!\n");
-   output("Three blind mice!\n");
-   output("See how they run!\n");
-   output("See how they run!\n");
+   output_message_about_three_blind_mice();   // function call
+   output_message_about_three_blind_mice();   // function call
+   output_message_about_how_mice_run();       // function call
+   output_message_about_how_mice_run();       // function call
+   output("Three blind mice!\n");             // function call
+   output("Three blind mice!\n");             // function call
+   output("See how they run!\n");             // function call
+   output("See how they run!\n");             // function call
 }
 
-void output_message_about_three_blind_mice()    // function definition
+void output_message_about_three_blind_mice()  // function definition
 {
     std::cout << "Three blind mice\n";
 }
 
-void output_message_about_how_mice_run()    // function definition
+void output_message_about_how_mice_run()      // function definition
 {
     std::cout << "See how they run\n";
 }
 
-void output(const std::string &message)
+void output(const std::string &message)       // function definition
 {
     std::cout << message;
 }
