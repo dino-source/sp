@@ -1,5 +1,5 @@
 This is step-by-step instruction, that you have to
-follow in your day-to-day work as a developers:
+follow in your day-to-day work as a developer:
 1. git pull
 2. write some code
 3. git status
