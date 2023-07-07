@@ -10,7 +10,11 @@
 int main()
 {
     std::string address = "Gantiadi, 24";
-    std::string name = "Nadia Sitkareva";
+    std::string first_name = "Nadia";
+    std::string last_name = "Sitkareva";
     char delimiter = '\n';
-    std::cout << name << delimiter << address << delimiter;
+    std::cout 
+        << "First name: " << first_name << delimiter 
+        << "Last name: " << last_name << delimiter
+        << "Address: " << address << delimiter;
 }
