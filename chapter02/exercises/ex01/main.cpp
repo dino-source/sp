@@ -9,5 +9,5 @@
 
 int main()
 {
-    std::cout << "\n\nhello world\n\n";
+    std::cout << "Name: Lada\nAddress: Lemon St.11\n";
 }
