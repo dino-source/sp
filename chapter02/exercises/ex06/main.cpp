@@ -14,3 +14,24 @@
 // sun is about 4.2 light years away.) Use type double (as in Listing 2.4) and this con-
 // version factor:
 // 1 light year = 63,240 astronomical units
+
+
+#include <iostream>
+#include <cmath>
+
+int main ()
+{
+    constexpr double ASTONOMICAL_UNITS_IN_LIGHT_YEARS = 63240;
+    double light_years;
+    std::cout << "Please, enter the number of light years: ";
+    std::cin >> light_years;
+    double astronomical_units;
+    astronomical_units = light_years * ASTONOMICAL_UNITS_IN_LIGHT_YEARS;
+    std::cout
+        << light_years
+        << " light years is "
+        << astronomical_units
+        << " astonomical units!\n";
+
+    return 0;
+}
