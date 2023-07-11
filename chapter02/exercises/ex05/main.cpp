@@ -10,3 +10,25 @@
 // 20 degrees Celsius is 68 degrees Fahrenheit.
 // For reference, here is the formula for making the conversion:
 // Fahrenheit = 1.8 × degrees Celsius + 32.0
+
+#include <iostream>
+#include <cmath>
+
+int main ()
+{
+    int degrees_celsius;
+    int fahrenheit;
+
+    std::cout << "Please, enter a Celsius value: ";
+    std::cin >> degrees_celsius;
+    fahrenheit = 1.8 * degrees_celsius + 32;
+    std::cout
+        << degrees_celsius
+        << " degrees Celsius is "
+        << fahrenheit
+        << " degrees Fahrenheit.\n";
+
+    return 0;
+}
+
+
