@@ -17,9 +17,9 @@ float
 // for example, in helper_functions.h
 int add(int a, int b); // function declaration (function prototype)
 int sub(int, int);
-std::string concatenate(std::string const &, std::string const &);
-void print(std::string const & message, std::ostream& out);
-void print(int number, std::ostream& out);
+std::string concatenate(std::string const &str1, std::string const &str2);
+void print(std::string const &message, std::ostream &out);
+void print(int number, std::ostream &out);
 
 void square(int number, int &result);
 int square(int number);
@@ -51,12 +51,17 @@ int sub(int a, int b)
     return a - b;
 }
 
+std::string concatenate(std::string const &str1, std::string const &str2)
+{
+    return str1 + str2;
+}
+
 void print(std::string const &message , std::ostream &out)
 {
     out << message;
 }
 
-void print(int number, std::ostream& out)
+void print(int number, std::ostream &out)
 {
     out << number;
 }
