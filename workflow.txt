@@ -1,5 +1,6 @@
-This is step-by-step instruction, that you have to
-follow in your day-to-day work as a developer:
+This is step-by-step instruction, you have to follow in your day-to-day work as
+a developer taking into account that you're familiar with Git basics already:
+
 1. git pull
 2. write some code
 3. git status
