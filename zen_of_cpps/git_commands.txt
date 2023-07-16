@@ -1,0 +1,32 @@
+1. Show current state of files in our git repository:
+    git status
+
+2. Download latest changes from github repo to your local repo:
+    git pull
+
+3. Show local branches:
+    git branch
+
+4. Show remote branches:
+    git branch -r
+
+5. Add modified or new files to git index:
+    git add <file_name>
+
+6. Commit changes and write commit message in-place (in terminal):
+    git commit -m "Add commit message that describes changes you've done"
+
+7. Commit changes and open text editor of choice to write commit message in the editor:
+    git commit
+
+8. Push your changes to remote repository (our github repo):
+    git push
+
+9. Create new branch and navigate there:
+    git checkout -b <branch_name>
+
+10. Navigate to branch <branch_name>:
+    git checkout <branch_name>
+
+11. View git history:
+    git log
