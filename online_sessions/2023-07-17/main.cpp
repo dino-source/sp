@@ -2,12 +2,12 @@
 #include <string>
 namespace nadia
 {
-    void output(std::string const &message, bool dummy)
+    void output(std::string const &message)
     {
         std::cout << message;
     }
     
-    void output(int number, bool dummy)
+    void output(int number)
     {
         std::cout << number;
     }
@@ -23,10 +23,6 @@ namespace nadia
 
 namespace dima
 {
-    void output(std::string const &message, char delim = '\n');
-    void output(int number, char delim = '\n');
-
-
     void output(std::string const &message, char delim = '\n')
     {
         std::cout << message << delim;
@@ -41,7 +37,9 @@ namespace dima
 
 int main()
 {
-    nadia::output("Please, enter an integer.\n", true);
+    nadia::output("Please, enter an integer: ");
     int x = nadia::request_integer_from_user();
-    nadia::output(x, true);
+    nadia::output("Here is your integer: ");
+    nadia::output(x);
+    nadia::output("\n\n");
 }
