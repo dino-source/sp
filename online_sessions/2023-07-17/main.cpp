@@ -46,5 +46,5 @@ int main()
     dima::output("Hi! I am Dima. Please, enter an integer:", ' ');
     int z = nadia::request_integer_from_user();
     dima::output("Here is your integer:", ' ');
-    dima::output(z, '\n');
+    dima::output(z);
 }
