@@ -37,9 +37,14 @@ namespace dima
 
 int main()
 {
-    nadia::output("Please, enter an integer: ");
+    nadia::output("Hi! I am Nadia. Please, enter an integer: ");
     int x = nadia::request_integer_from_user();
     nadia::output("Here is your integer: ");
     nadia::output(x);
-    nadia::output("\n\n");
+    nadia::output("\n");
+
+    dima::output("Hi! I am Dima. Please, enter an integer:", ' ');
+    int z = nadia::request_integer_from_user();
+    dima::output("Here is your integer:", ' ');
+    dima::output(z, '\n');
 }
