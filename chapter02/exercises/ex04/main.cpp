@@ -21,5 +21,5 @@ int main()
     cout << '\n';
     age_in_months = age_in_years * months_in_a_year;
     cout << "Your age in months is " << age_in_months;
-    return 0; 
+    return 0;
 }
