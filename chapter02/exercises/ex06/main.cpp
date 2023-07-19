@@ -21,12 +21,12 @@
 
 int main ()
 {
-    constexpr double ASTONOMICAL_UNITS_IN_LIGHT_YEARS = 63240;
+    constexpr double ASTONOMICAL_UNITS_IN_LIGHT_YEAR = 63240;
     double light_years;
     std::cout << "Please, enter the number of light years: ";
     std::cin >> light_years;
     double astronomical_units;
-    astronomical_units = light_years * ASTONOMICAL_UNITS_IN_LIGHT_YEARS;
+    astronomical_units = light_years * ASTONOMICAL_UNITS_IN_LIGHT_YEAR;
     std::cout
         << light_years
         << " light years is "
