@@ -1,0 +1,53 @@
+1. Обновить систему (все установленные программы):
+    sudo apt upgrade -y && sudo snap refresh
+
+2. Показать текущее местоположение (print working directory):
+    pwd
+
+3. Показать все папки и файлы (кроме скрытых) в текущей директории (list files and folders):
+    ls
+
+4. Показать все папки и файлы (включая скрытые) в текущей директории:
+    ls -la
+
+5. Перейти в директорию dir_name:
+    cd dir_name
+
+6. Перейти в домашнюю папку:
+    cd
+
+7. Перейти на один уровень выше:
+    cd ..
+
+8. Создать папку <dir_name>:
+    mkdir dir_name
+
+9. Создать папку dir1, а в ней папку dir2
+    mkdir -p dir1/dir2
+
+10. Создать файл file_name в текущей папке:
+    touch file_name
+
+11. Обновить систему:
+    sudo apt upgrade -y && sudo snap refresh
+
+12. Удалить файл file_name:
+    rm file_name
+
+13. Удалить пустую директорию dir_name:
+    rmdir dir_name
+
+14. Удалить директорию dir_name и всё её содержимое:
+    rm -rf dir_name
+
+15. Переместить директорию ~/my_docs в директорию ~/Documents:
+    mv ~/my_docs ~/Documents
+
+16. Копировать директорию ~/my_docs в директорию ~/Documents:
+    cp -r ~/my_docs ~/Documents
+
+17. Переименовать файл file1, находящийся в текущей папке, в файл file2:
+    mv file1 file2
+
+18. Переименовать папку dir1, находящуюся в текущей папке, в папку dir2:
+    mv dir1 dir2
