@@ -13,30 +13,26 @@
 
 #include <iostream>
 
-void message_about_three_blind_mice(); // function prototype
-void message_about_see_how_they_run(); // function prototype
+void three_blind_mice(); // function prototype
+void see_how_they_run(); // function prototype
+
+int main ()
+{
+    three_blind_mice();
+    see_how_they_run();
+}
+
 
 void three_blind_mice()
 {
     using namespace std;
-   
+    cout << "Three blind mice\n";
     cout << "Three blind mice\n";
 }
 
 void see_how_they_run()
 {
     using namespace std;
-
-    cout << "See how they run\n";
-}
-
-int main()
-{
-    using namespace std;
-    cout << "Three blind mice\n";
-    cout << "Three blind mice\n";
     cout << "See how they run\n";
     cout << "See how they run\n";
-    
-    return 0; 
 }
