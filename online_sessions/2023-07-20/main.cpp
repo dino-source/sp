@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 struct Student
 {
@@ -21,6 +22,22 @@ struct Student
 int main()
 {
     Student george;
+    george.first_name = "George";
     george.introduce_yourself();
+    Student nataly;
+    nataly.first_name = "Nataly";
+    nataly.last_name = "Rostova";
+    nataly.age = 19;
+    nataly.introduce_yourself();
+    Student robert;
+    robert.first_name = "Robert";
+    robert.age = 20;
+    robert.introduce_yourself();
 
+    std::vector<Student> students;
+    students.push_back(george);
+    students.push_back(nataly);
+    students.push_back(robert);
+    
+    
 }
