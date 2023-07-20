@@ -20,20 +20,30 @@ struct Student
         std::cout << "I am " << age << " years old.\n";
     }
     
+    void confess() const
+    {
+        std::cout << "Now I am drinking. I loose my health: " << health << '\n';
+    }
+
     void drink(int shots)
     {
         health /= shots;
-        std::cout << "Now I am drinking. I loose my health: " << health << '\n';
     }
 };
 
-
-void print(std::vector<Student> &students)
+void live(std::vector<Student> &students)
 {
     for (auto &student : students)
     {
-        student.introduce_yourself();
         student.drink(2);
+    }
+} 
+
+void print(std::vector<Student> const &students) 
+{
+    for (auto const &student : students)
+    {
+        student.introduce_yourself();
     }   
 }
 
@@ -55,7 +65,9 @@ int main()
     students.push_back(nataly);
     students.push_back(robert);
     print(students);
+    live(students);
     students.pop_back();
     std::cout << "\nr.i.p Robert\n\n"; 
     print(students);
+    live(students);
 }
