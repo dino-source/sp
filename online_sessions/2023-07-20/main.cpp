@@ -12,32 +12,39 @@ struct Student
     std::string email {"noname@anonymous.us"};
     int age {18};
     int grade {1};
-    void introduce_yourself()
+    void introduce_yourself() const
     {
         std::cout << "My name is " << first_name << ' ' << last_name << '\n';
         std::cout << "I am " << age << " years old.\n";
     }
 };
 
+
+void print(std::vector<Student> const &students)
+{
+    for (auto const &student : students)
+    {
+        student.introduce_yourself();
+    }   
+}
+
+
 int main()
 {
     Student george;
     george.first_name = "George";
-    george.introduce_yourself();
     Student nataly;
     nataly.first_name = "Nataly";
     nataly.last_name = "Rostova";
     nataly.age = 19;
-    nataly.introduce_yourself();
     Student robert;
     robert.first_name = "Robert";
     robert.age = 20;
-    robert.introduce_yourself();
 
     std::vector<Student> students;
     students.push_back(george);
     students.push_back(nataly);
     students.push_back(robert);
-    
-    
+    print(students);
+    students  
 }
