@@ -19,6 +19,6 @@ int main()
     cout << "Please, enter your age:";
     cin >> age_in_years;
     age_in_months = age_in_years * MONTHS_IN_YEAR;
-    cout << "Your age in months is " << age_in_months << '\n';
+    cout << "Your age in months is " << age_in_months << delimiter; 
     return 0;
 }
