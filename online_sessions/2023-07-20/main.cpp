@@ -11,10 +11,16 @@ struct Student
     std::string email {"noname@anonymous.us"};
     int age {18};
     int grade {1};
-    void introduce_yourself("Please, intoduce your")
+    void introduce_yourself()
+    {
+        std::cout << "My name is " << first_name << ' ' << last_name << '\n';
+        std::cout << "I am " << age << " years old.\n";
+    }
 };
 
 int main()
 {
+    Student george;
+    george.introduce_yourself();
 
 }
