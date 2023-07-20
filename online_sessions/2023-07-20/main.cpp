@@ -12,19 +12,28 @@ struct Student
     std::string email {"noname@anonymous.us"};
     int age {18};
     int grade {1};
+    double health {100.0};
+
     void introduce_yourself() const
     {
         std::cout << "My name is " << first_name << ' ' << last_name << '\n';
         std::cout << "I am " << age << " years old.\n";
     }
+    
+    void drink(int shots)
+    {
+        health /= shots;
+        std::cout << "Now I am drinking. I loose my health: " << health << '\n';
+    }
 };
 
 
-void print(std::vector<Student> const &students)
+void print(std::vector<Student> &students)
 {
-    for (auto const &student : students)
+    for (auto &student : students)
     {
         student.introduce_yourself();
+        student.drink(2);
     }   
 }
 
@@ -46,5 +55,7 @@ int main()
     students.push_back(nataly);
     students.push_back(robert);
     print(students);
-    students  
+    students.pop_back();
+    std::cout << "\nr.i.p Robert\n\n"; 
+    print(students);
 }
