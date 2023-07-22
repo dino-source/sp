@@ -15,6 +15,11 @@ struct Student
     int grade {1};
     double health {100.0};
 
+    std::string full_name() const
+    {
+        return first_name + " " + last_name;
+    }
+
     void introduce_yourself(bool report_age = true, std::string const &delim = "\n") const
     {
         std::cout << "My name is " << first_name << ' ' << last_name << '.';
@@ -128,17 +133,18 @@ void live(Students &students) noexcept
     static bool one_of_students_is_dead = false;
     if (!one_of_students_is_dead)
     {
-        for (auto &s : students)
+        for (auto &student : students)
         {
-            s.drink(2);
-            s.introduce_yourself(false, " ");
-            s.confess();
+            student.drink(2);
+            student.introduce_yourself(false, " ");
+            student.confess();
 
-            if (s.health < 1)
+            if (student.health < 1)
             {
-                std::cout << s.first_name << ' ' << s.last_name << " is dead.\n\n\n\n";
+                std::cout << student.full_name() << " is dead.\n\n\n\n";
                 one_of_students_is_dead = true;
-                std::erase_if(students, [](Student &st) noexcept { return st.health < 1; });
+                auto is_dead = [](Student &s) noexcept { return s.health < 1; };
+                std::erase_if(students, is_dead);
                 return;
             }
         }
