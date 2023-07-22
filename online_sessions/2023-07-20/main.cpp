@@ -22,7 +22,7 @@ struct Student
 
     void introduce_yourself(bool report_age = true, std::string const &delim = "\n") const
     {
-        std::cout << "My name is " << first_name << ' ' << last_name << '.';
+        std::cout << "My name is " << full_name() << '.';
         if (report_age) {
             std::cout << " I am " << age << " years old.";            
         }
