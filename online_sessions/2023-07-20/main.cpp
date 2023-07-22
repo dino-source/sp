@@ -36,44 +36,9 @@ struct Student
 };
 
 using Students = std::vector<Student>;
-
-void print(Students const &students, std::string const &delim = "\n\n") 
-{
-    for (auto const &student : students)
-    {
-        student.introduce_yourself();
-    }
-    std::cout << delim;
-}
-
-void print(Student const &student, std::string const &delim = "\n") 
-{
-    student.introduce_yourself();
-    std::cout << delim;
-}
-
-void live(Students &students)
-{
-    static bool one_of_students_is_dead = false;
-    if (!one_of_students_is_dead)
-    {
-        for (auto &s : students)
-        {
-            s.drink(2);
-            s.introduce_yourself(false, " ");
-            s.confess();
-
-            if (s.health < 1)
-            {
-                std::cout << s.first_name << ' ' << s.last_name << " is dead.\n\n\n\n";
-                one_of_students_is_dead = true;
-                std::erase_if(students, [](Student &s){ return s.health < 1; });
-                return;
-            }
-        }
-        std::cout << "\n";        
-    }
-} 
+void print(Students const &students, std::string const &delim = "\n\n");
+void print(Student const &student, std::string const &delim = "\n");
+void live(Students &students) noexcept;
 
 int main()
 {
@@ -140,3 +105,43 @@ int main()
 
     print(students);
 }
+
+
+
+void print(Students const &students, std::string const &delim) 
+{
+    for (auto const &student : students)
+    {
+        student.introduce_yourself();
+    }
+    std::cout << delim;
+}
+
+void print(Student const &student, std::string const &delim) 
+{
+    student.introduce_yourself();
+    std::cout << delim;
+}
+
+void live(Students &students) noexcept
+{
+    static bool one_of_students_is_dead = false;
+    if (!one_of_students_is_dead)
+    {
+        for (auto &s : students)
+        {
+            s.drink(2);
+            s.introduce_yourself(false, " ");
+            s.confess();
+
+            if (s.health < 1)
+            {
+                std::cout << s.first_name << ' ' << s.last_name << " is dead.\n\n\n\n";
+                one_of_students_is_dead = true;
+                std::erase_if(students, [](Student &st) noexcept { return st.health < 1; });
+                return;
+            }
+        }
+        std::cout << "\n";        
+    }
+} 
