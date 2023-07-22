@@ -20,6 +20,11 @@ struct Student
         return first_name + " " + last_name;
     }
 
+    bool is_dead() const
+    {
+        return health < 1;
+    }
+
     void introduce_yourself(bool report_age = true, std::string const &delim = "\n") const
     {
         std::cout << "My name is " << full_name() << '.';
@@ -139,11 +144,11 @@ void live(Students &students) noexcept
             student.introduce_yourself(false, " ");
             student.confess();
 
-            if (student.health < 1)
+            if (student.is_dead())
             {
                 std::cout << student.full_name() << " is dead.\n\n\n\n";
                 one_of_students_is_dead = true;
-                auto is_dead = [](Student &s) noexcept { return s.health < 1; };
+                auto is_dead = [](Student &s) noexcept { return s.is_dead(); };
                 std::erase_if(students, is_dead);
                 return;
             }
