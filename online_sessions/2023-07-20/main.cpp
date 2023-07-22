@@ -32,11 +32,11 @@ struct Student
         std::cout << "My name is " << full_name() << '.';
         if (report_age)
         {
-            std::cout << " I am " << age << " years old.";            
+            std::cout << " I am " << age << " years old.";
         }
         std::cout << delim;
     }
-    
+
     void confess() const
     {
         std::cout << "Now I am drinking. I loose my health: " << health << '\n';
@@ -154,6 +154,6 @@ void live(Students &students) noexcept
                 return;
             }
         }
-        std::cout << "\n";        
+        std::cout << "\n";
     }
-} 
+}
