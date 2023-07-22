@@ -3,6 +3,8 @@
 #include <vector>
 
 
+using Delim = std::string const &;
+
 struct Student
 {
     std::string first_name {"John"};
@@ -25,7 +27,7 @@ struct Student
         return health < 1;
     }
 
-    void introduce_yourself(bool report_age = true, std::string const &delim = "\n") const
+    void introduce_yourself(bool report_age = true, Delim delim = "\n") const
     {
         std::cout << "My name is " << full_name() << '.';
         if (report_age)
@@ -47,8 +49,8 @@ struct Student
 };
 
 using Students = std::vector<Student>;
-void print(Students const &students, std::string const &delim = "\n\n");
-void print(Student const &student, std::string const &delim = "\n");
+void print(Students const &students, Delim delim = "\n\n");
+void print(Student const &student, Delim delim = "\n");
 void live(Students &students) noexcept;
 
 int main()
@@ -117,7 +119,7 @@ int main()
     print(students);
 } // main
 
-void print(Students const &students, std::string const &delim) 
+void print(Students const &students, Delim delim) 
 {
     for (auto const &student : students)
     {
@@ -126,7 +128,7 @@ void print(Students const &students, std::string const &delim)
     std::cout << delim;
 }
 
-void print(Student const &student, std::string const &delim) 
+void print(Student const &student, Delim delim) 
 {
     student.introduce_yourself();
     std::cout << delim;
