@@ -114,9 +114,7 @@ int main()
     }
 
     print(students);
-}
-
-
+} // main
 
 void print(Students const &students, std::string const &delim) 
 {
