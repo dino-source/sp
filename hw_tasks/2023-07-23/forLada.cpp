@@ -17,7 +17,7 @@ Provide the following member functions:
 
 Use std::cout object to output cat status to console. Define std::vector of 4
 objects of type Cat. Use range-based 'for' loop to visit each element of the
-vector and output each car info to console.
+vector and output each cat info to console.
 Cat member functions have to be defined with respect to constness (constant
 member functions are those functions that are denied permission to change the
 values of the data members of their class).
