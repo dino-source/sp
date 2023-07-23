@@ -10,3 +10,18 @@
 // 20 degrees Celsius is 68 degrees Fahrenheit.
 // For reference, here is the formula for making the conversion:
 // Fahrenheit = 1.8 × degrees Celsius + 32.0
+
+#include <iostream>
+
+
+int main()
+{
+    using namespace std;
+    int celsius_value;
+    cout << "Please enter a Celsius value: ";
+    cin >> celsius_value;
+    char delimetr = '\n';
+    int fahrenheit_value = 1.8 * celsius_value +32.0;
+    cout << celsius_value << " degrees Celsius is " 
+         << fahrenheit_value << " degrees Fahrenheit" << delimetr; 
+}
