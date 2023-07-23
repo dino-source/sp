@@ -12,7 +12,6 @@
 // Fahrenheit = 1.8 × degrees Celsius + 32.0
 
 #include <iostream>
-#include <cmath>
 
 int main ()
 {
