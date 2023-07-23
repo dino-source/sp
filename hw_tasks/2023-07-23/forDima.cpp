@@ -7,7 +7,7 @@ Implement struct Car with the following data members:
 5. price (for example, $32000)
 6. tank (you fill up car tank with fuel, so code out connection between 'tank'
 data member and fill_up() member function)
-7. max_speed (for examle, 260 km/h)
+7. max_speed (for example, 260 km/h)
 
 Provide the following member functions:
 1. move()
