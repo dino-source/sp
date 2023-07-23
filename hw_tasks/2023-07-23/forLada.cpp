@@ -14,6 +14,7 @@ Provide the following member functions:
 2. sleep()
 3. run()
 4. sound()
+5. info()
 
 Use std::cout object to output cat status to console. Define std::vector of 4
 objects of type Cat. Use range-based 'for' loop to visit each element of the
