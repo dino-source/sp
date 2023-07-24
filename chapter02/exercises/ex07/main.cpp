@@ -8,3 +8,20 @@
 // Enter the number of hours: 9
 // Enter the number of minutes: 28
 // Time: 9:28
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Enter the number of hours: ";
+    int hours, min;
+    cin >> hours;
+    cout<<"Enter the number of minutes: ";
+    cin >> min;
+    cout<< "Time: "<< hours <<":"<< min;
+     
+
+    return 0;
+}
