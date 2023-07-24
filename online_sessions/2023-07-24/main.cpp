@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 {
     constexpr int LIMIT{10};
     int i{0};
-    while (i < LIMIT) {
+    while (i <= LIMIT) {
         std::cout << i << ' ';
         i++;
     }
@@ -17,11 +17,26 @@ int main(int argc, char const *argv[])
         std::cout << "Here is your variable: ";
         std::cout << i-- << '\n';
     }
-    while (i > 0);
+    while (i >= 0);
+
     std::cout << "Here is your for loop:\n";
-    for (int x {0}; x < LIMIT; x++)
+    int x {0};
+    for (; x <= LIMIT; x++)
     {
         std::cout << x << ' ';
+    }
+    std::cout << "\n x: " << x;
+    
+    for (;;)
+    {
+        std::cout <<"Enter an integer: ";
+        int num;
+        
+    }
+    
+    while (true)
+    {
+        /* code */
     }
     
 }
