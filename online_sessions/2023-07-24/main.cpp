@@ -29,14 +29,35 @@ int main(int argc, char const *argv[])
     
     for (;;)
     {
-        std::cout <<"Enter an integer: ";
+        std::cout <<"\nEnter an integer: ";
         int num;
-        
+        std::cin >> num;
+        if (num < 0)
+        {
+            std::cout << "Num < 0\n";
+        }
+        else if (num > 0)        
+        {
+            std::cout << "Num > 0\n";
+        }
+        else
+        {
+            std::cout << "Num = 0\n";
+            break;
+        }
     }
     
     while (true)
     {
-        /* code */
+        switch (expression)
+        {
+        case /* constant-expression */:
+            /* code */
+            break;
+        
+        default:
+            break;
+        }
     }
     
 }
