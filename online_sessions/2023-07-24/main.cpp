@@ -49,13 +49,30 @@ int main(int argc, char const *argv[])
     
     while (true)
     {
-        switch (expression)
+        std::cout <<"\nEnter a color (red - 1, green - 2, blue - 3); to quit enter 0: ";
+        int color;
+        std::cin >> color;
+
+        switch (color)
         {
-        case /* constant-expression */:
-            /* code */
+        case 1:
+            std::cout << "You've chosen red color\n";
+            break;
+
+        case 2:
+            std::cout << "You've chosen green color\n";
+            break;
+
+        case 3:
+            std::cout << "You've chosen blue color\n";
+            break;
+
+        case 0:
+            std::cout << "You've chosen to quit\n";
             break;
         
         default:
+            std::cout << "You have to choose 1 or 2 or 3 or 0. Another numbers are not allowed.\n";
             break;
         }
     }
