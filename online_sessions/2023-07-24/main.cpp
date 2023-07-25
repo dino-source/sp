@@ -69,12 +69,13 @@ int main(int argc, char const *argv[])
 
         case 0:
             std::cout << "You've chosen to quit\n";
-            break;
+            goto end_infinite_while_loop;
         
         default:
             std::cout << "You have to choose 1 or 2 or 3 or 0. Another numbers are not allowed.\n";
             break;
         }
-    }
-    
+    } // while
+    end_infinite_while_loop:
+    ;
 }
