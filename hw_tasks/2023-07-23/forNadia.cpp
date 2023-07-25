@@ -48,13 +48,10 @@ struct Dog
         std::cout << '\n';
     }
 
-    void awards(int training_a_week)
-    {
-        int awards = training_a_week * 0.5 * age;
-    }
 
     void report() const
     {
+        int awards = training_a_week * 0.5 * age;
         std::cout << "Now it is training. It got " << awards << "awards.\n";
     }
 };
@@ -73,8 +70,8 @@ int main ()
         .date_of_birth = "2014-03-08",
         .fur_color = "brown",
         .eyes_color = "black",
-        .training_a_week = 2,
         .age = 9,
+        .training_a_week = 2,
         .weight = 22.5,
         .height = 45
     };
@@ -120,6 +117,21 @@ int main ()
 
     std::vector<Dog> dogs {gina, art, feliny, marta};
 
-    print(dogs);
-
+    print (dogs);
 };
+
+
+void print(Dogs const &dogs, Delim delim) 
+{
+    for (auto const &dog : dogs)
+    {
+        dog.introduce_dog_pet();
+    }
+    std::cout << delim;
+}
+
+void print(Dog const &dog, Delim delim) 
+{
+    dog.introduce_dog_pet();
+    std::cout << delim;
+}
