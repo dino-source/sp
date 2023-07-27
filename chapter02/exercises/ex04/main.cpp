@@ -9,14 +9,14 @@
 
 #include <iostream>
 
-using namespace std;
+
 
 int main()
 {
-    cout<<"Enter your age:";
+    std::cout<<"Enter your age:";
     int age;
-    cin >> age;
+    std::cin >> age;
     age = age*12;
-    cout <<"Your age in months is "<<  age;
+    std::cout <<"Your age in months is "<<  age;
     return 0;
 }
