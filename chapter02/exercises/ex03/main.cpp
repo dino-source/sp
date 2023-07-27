@@ -14,13 +14,13 @@
 
 #include <iostream>
 
-using namespace std;
+
 
 int main()
 {
-    cout<<"Thee blind mice\nThee blind mice";
-    cout<<"See how they run";
-    cout<<"See how they run";
+    std::cout<<"Thee blind mice\nThee blind mice";
+    std::cout<<"See how they run";
+    std::cout<<"See how they run";
     
     return 0;
 }
