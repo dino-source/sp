@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
     int i {0};
     for (int i = 0; i < LIMIT; i++)
     {
-        /* code */
+        /* something */
     }
     
 }
