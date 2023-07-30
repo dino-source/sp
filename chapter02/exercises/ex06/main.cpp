@@ -14,18 +14,3 @@
 // sun is about 4.2 light years away.) Use type double (as in Listing 2.4) and this con-
 // version factor:
 // 1 light year = 63,240 astronomical units
-
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout<<"Enter the number of light years:";
-    int years, au;
-    cin >> years;
-    au = years*63240;
-    cout<<years<<" light years =  "<<au<<" stronomical units.";
-
-    return 0;
-}
