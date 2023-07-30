@@ -24,6 +24,43 @@ Use 'if-else' statement where applicable. */
 #include <iostream>
 #include <vector>
 #include <string>
+struct Cat
+{
+    std::string breed;
+    std::string name;
+    std::string date_of_birth;
+    std::string fur_color;
+    std::string eyes_color; 
+    std::string weight;
+    std::string height;
+    std::string length;
+    void eat();
+    void sleep();
+    void run();
+    void sound();
+    void info();
+};
+
+void Cat::eat()
+{
+    // TODO: implement this method
+}
+void Cat::sleep()
+{
+    // TODO: implement this method
+}
+void Cat::run()
+{
+    // TODO: implement this method
+}
+void Cat::sound()
+{
+    // TODO: implement this method
+}
+void Cat::info()
+{
+    // TODO: implement this method
+}
 
 int main(int argc, char const *argv[])
 {
@@ -31,52 +68,52 @@ int main(int argc, char const *argv[])
     {
         std::cout << "\nWhat do you wanna know about the cat?";
         std::cout << "\nChoose a number (breed - 1, name - 2, date of birth - 3, fur color - 4, eyes color - 5, weight - 6, height - 7, length - 8). To quit enter 0.";
-        std::cout << "\nEnter a number: ";  
+        std::cout << "\nEnter a number: ";
         int number;
         std::cin >> number;
 
         switch (number)
         {
         case 1:
-        std::cout << "His breed is the Norwegian Forest cat\n";
-        break;
+            std::cout << "His breed is the Norwegian Forest cat\n";
+            break;
 
         case 2:
-        std::cout << "His name is Bob\n";
-        break;
+            std::cout << "His name is Bob\n";
+            break;
 
         case 3:
-        std::cout << "His date of birth is June 1, 2012\n";
-        break;
+            std::cout << "His date of birth is June 1, 2012\n";
+            break;
 
         case 4:
-        std::cout << "He's a calico cat\n";
-        break;
+            std::cout << "He's a calico cat\n";
+            break;
 
         case 5:
-        std::cout << "He has green eyes\n";
-        break;
+            std::cout << "He has green eyes\n";
+            break;
 
         case 6:
-        std::cout << "It weighs 7 kg\n";
-        break;
+            std::cout << "It weighs 7 kg\n";
+            break;
 
         case 7:
-        std::cout << "His height is 35 cm\n";
-        break;
+            std::cout << "His height is 35 cm\n";
+            break;
 
         case 8:
-        std::cout << "His length is 90 cm\n";
-        break;
+            std::cout << "His length is 90 cm\n";
+            break;
 
         case 0:
-        std::cout << "You've chosen to qiut\n";
-        goto end_infinite_while_loop;
+            std::cout << "You've chosen to qiut\n";
+            goto end_infinite_while_loop;
 
         default:
-        std::cout << "I don't understand you. Could you pick a number from 1 to 4?\n";
-        break;
+            std::cout << "I don't understand you. Could you pick a number from 1 to 4?\n";
+            break;
         }
-    } end_infinite_while_loop:
-    ;
+    }
+end_infinite_while_loop:;
 }
