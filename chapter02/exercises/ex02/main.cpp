@@ -10,13 +10,13 @@
 int main()
 {
     int distance_in_furlongs;
-    int yards_in_furlongs = 220;
+    constexpr int YARDS_IN_FURLONGS = 220;
     char delimiter = '\n';
 
     std::cout << "Please enter distance in furlongs:\n";
     std::cin >> distance_in_furlongs;
     std::cout << '\n';
-    int distance_in_yards = distance_in_furlongs * yards_in_furlongs;
+    int distance_in_yards = distance_in_furlongs * YARDS_IN_FURLONGS;
     std::cout << "Then it's " << distance_in_yards << " yards in furlongs" << '\n';
 
     return 0;
