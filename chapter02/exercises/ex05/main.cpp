@@ -12,6 +12,8 @@
 // Fahrenheit = 1.8 × degrees Celsius + 32.0
 
 #include <iostream>
+double celsius_to_fahrenheit(double temperature_in_celsius);
+
 
 
 int main()
@@ -20,8 +22,14 @@ int main()
     int celsius_value;
     cout << "Please enter a Celsius value: ";
     cin >> celsius_value;
-    char delimetr = '\n';
-    int fahrenheit_value = 1.8 * celsius_value +32.0;
+    char delimeter = '\n';
+    int fahrenheit_value = celsius_to_fahrenheit(celsius_value);
     cout << celsius_value << " degrees Celsius is " 
-         << fahrenheit_value << " degrees Fahrenheit" << delimetr; 
+         << fahrenheit_value << " degrees Fahrenheit" << delimeter; 
+}
+
+double celsius_to_fahrenheit(double temperature_in_celsius)
+{
+    double temperature_in_fahrenheit = 1.8 * temperature_in_celsius +32.0;
+    return temperature_in_fahrenheit;
 }
