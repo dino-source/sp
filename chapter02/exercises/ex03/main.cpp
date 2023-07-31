@@ -13,13 +13,23 @@
 
 #include <iostream>
 
-using namespace std;
+void func1();
+void func2();
 
 int main()
 {
-    cout << "Thee blind mice\nThee blind mice";
-    cout << "See how they run";
-    cout << "See how they run";
+    func1();
+    func1();
+    func2();
+    func2();
+}
 
-    return 0;
+void func1()
+{
+    std::cout << "Thee blind mice\n";
+}
+
+void func2()
+{
+    std::cout << "See how they run\n";
 }
