@@ -13,23 +13,23 @@
 
 #include <iostream>
 
-void func1();
-void func2();
+void output_message_about_three_blind_mice();
+void output_message_about_how_they_run();
 
 int main()
 {
-    func1();
-    func1();
-    func2();
-    func2();
+    output_message_about_three_blind_mice();
+    output_message_about_three_blind_mice();
+    output_message_about_how_they_run();
+    output_message_about_how_they_run();
 }
 
-void func1()
+void output_message_about_three_blind_mice()
 {
     std::cout << "Thee blind mice\n";
 }
 
-void func2()
+void output_message_about_how_they_run()
 {
     std::cout << "See how they run\n";
 }
