@@ -11,17 +11,15 @@
 // One function, called two times, should produce the first two lines, and the remain-
 // ing function, also called twice, should produce the remaining output.
 
-
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    cout<<"Thee blind mice\nThee blind mice";
-    cout<<"See how they run";
-    cout<<"See how they run";
-    
+    cout << "Thee blind mice\nThee blind mice";
+    cout << "See how they run";
+    cout << "See how they run";
+
     return 0;
 }
-

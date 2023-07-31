@@ -52,7 +52,7 @@ struct Dog
     void report() const
     {
         double awards = training_a_week * 0.5 * age;
-        std::cout << "Now it is training. It got " << awards << "awards.\n";
+        std::cout << "Now it is training. It got " << awards << " awards.\n\n";
     }
 };
 
@@ -117,7 +117,8 @@ int main ()
 
     std::vector<Dog> dogs {gina, art, feliny, marta};
 
-    print (dogs);
+    print(dogs);
+    
 };
 
 
@@ -126,6 +127,7 @@ void print(Dogs const &dogs, Delim delim)
     for (auto const &dog : dogs)
     {
         dog.introduce_dog_pet();
+        dog.report();
     }
     std::cout << delim;
 }
