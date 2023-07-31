@@ -2,18 +2,16 @@
 
 int main()
 {
-    const int inch_per_pound = 12;
-    int hight_in_inches();
-    std::cout << "Please, enter your hight in inches:_______\b\b\b\b\b\b\b";
-    std::cin >> hight_in_inches;
-    int pounds = hight_in_inches / inch_per_pound;
-    int inches = hight_in_inches % inch_per_pound;
-    std::cout 
-        << "Than your hight is: " 
-        << pounds 
-        << " pounds and " 
-        << inches 
+    const int INCH_PER_POUND = 12;
+    int height_in_inches{};
+    std::cout << "Please, enter your height in inches:_______\b\b\b\b\b\b\b";
+    std::cin >> height_in_inches;
+    int pounds = height_in_inches / INCH_PER_POUND;
+    int inches = height_in_inches % INCH_PER_POUND;
+    std::cout
+        << "Then your height is: "
+        << pounds
+        << " pounds and "
+        << inches
         << " inches.\n";
-
-
 }

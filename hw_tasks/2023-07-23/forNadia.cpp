@@ -51,7 +51,7 @@ struct Dog
 
     void report() const
     {
-        int awards = training_a_week * 0.5 * age;
+        double awards = training_a_week * 0.5 * age;
         std::cout << "Now it is training. It got " << awards << "awards.\n";
     }
 };
