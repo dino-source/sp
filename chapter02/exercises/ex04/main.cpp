@@ -13,10 +13,10 @@ using namespace std;
 
 int main()
 {
-    cout<<"Enter your age:";
+    cout << "Enter your age:";
     int age;
     cin >> age;
-    age = age*12;
-    cout <<"Your age in months is "<<  age;
+    age = age * 12;
+    cout << "Your age in months is " << age;
     return 0;
 }
