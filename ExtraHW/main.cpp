@@ -24,6 +24,7 @@ Use 'if-else' statement where applicable. */
 #include <iostream>
 #include <vector>
 #include <string>
+
 struct Cat
 {
     std::string breed{"Norwegian Forest cat"};
@@ -38,26 +39,44 @@ struct Cat
     void sleep();
     void run();
     void sound();
-    void info();
+    void info();   
 };
 
 void Cat::eat()
 {
-    // TODO: implement this method
+    std::cout << "crunch-crunch-crunch";
 }
 void Cat::sleep()
 {
-    // TODO: implement this method
+    std::cout << "Z-z-Z-z";
 }
 void Cat::run()
 {
-    // TODO: implement this method
+    std::cout << "*Thrump-thrump*";
 }
 void Cat::sound()
 {
-    // TODO: implement this method
+    std::cout << "purr";
 }
 void Cat::info()
 {
-    // TODO: implement this method
+    std::string breed; name; date_of_birth; fur_color; eyes_color; weight; height; length;
+}
+
+
+
+
+int main()
+{
+    Cat Bun
+    {
+        std::string breed = "brown cat"; 
+        std::string name = "Bun";
+        std::string date_of_birth = "2010_12_03";
+        std::string fur_color = "orange";
+        std::string eyes_color = "dark brown";
+        std::string weight = "4 kg";
+        std::string height = "30 cm";
+        std::string length = "76 cm";
+    }      
 }
