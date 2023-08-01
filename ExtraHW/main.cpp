@@ -36,81 +36,77 @@ struct Cat
     std::string height{"28 cm"};
     std::string length{"72 cm"};
 
-    void Cat::eat()
+    void eat()
     {
         std::cout << "crunch-crunch-crunch";
     }
-    void Cat::sleep()
+    void sleep()
     {
         std::cout << "Z-z-Z-z";
     }
-    void Cat::run()
+    void run()
     {
         std::cout << "*Thrump-thrump*";
     }
-    void Cat::sound()
+    void sound()
     {
         std::cout << "purr";
-    } 
-    void Cat::info()
+    }
+    void show_info() const
     {
-        // TODO: implement this method
+        std::cout << "Say hi to " << name << "."
+                  << "I think she likes you a lot."
+                  << "\n";
     };
-
-
-
 };
 
-
+using Cats = std::vector<Cat>;
 
 int main()
 {
-    Cat boba
-    {
+    Cat boba{
         .breed = "Turkish Van",
-        .date_of_birth = "2010_12_03",        
         .name = "Boba",
+        .date_of_birth = "2010_12_03",
         .fur_color = "white & orange",
         .eyes_color = "dark brown",
         .weight = "4 kg",
         .height = "23 cm",
-        .length = "56 cm";
-    };
+        .length = "56 cm"};
 
-    Cat richi
-    {
+    Cat richi{
         .breed = "Japanese Bobtail",
-        .date_of_birth = "2019_08_20",        
         .name = "Richi",
+        .date_of_birth = "2019_08_20",
         .fur_color = "black & white",
         .eyes_color = "green",
         .weight = "5 kg",
         .height = "25 cm",
-        .length = "45 cm";
-    };
+        .length = "45 cm"};
 
-    Cat mimi 
-    {
+    Cat mimi{
         .breed = "Calico",
-        .date_of_birth = "2015_02_28",        
         .name = "Mimi",
+        .date_of_birth = "2015_02_28",
         .fur_color = "black & white & orange",
         .eyes_color = "yellow",
         .weight = "3.5 kg",
         .height = "24 cm",
-        .length = "62 cm";
+        .length = "62 cm"
+
     };
 
-    Cat rosie
-    {
+    Cat rosie{
         .breed = "Oriental Short Hair",
-        .date_of_birth = "2017_03_15",        
         .name = "Rosie",
+        .date_of_birth = "2017_03_15",
         .fur_color = "white & beige & black",
         .eyes_color = "green",
         .weight = "4.2 kg",
         .height = "26 cm",
-        .length = "74 cm";
-    };
-};
+        .length = "74 cm"
 
+    };
+
+    std::vector<Cat> cats{boba, richi, mimi, rosie};
+};
