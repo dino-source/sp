@@ -35,48 +35,82 @@ struct Cat
     std::string weight{"5 kg"};
     std::string height{"28 cm"};
     std::string length{"72 cm"};
-    void eat();
-    void sleep();
-    void run();
-    void sound();
-    void info();   
+
+    void Cat::eat()
+    {
+        std::cout << "crunch-crunch-crunch";
+    }
+    void Cat::sleep()
+    {
+        std::cout << "Z-z-Z-z";
+    }
+    void Cat::run()
+    {
+        std::cout << "*Thrump-thrump*";
+    }
+    void Cat::sound()
+    {
+        std::cout << "purr";
+    } 
+    void Cat::info()
+    {
+        // TODO: implement this method
+    };
+
+
+
 };
-
-void Cat::eat()
-{
-    std::cout << "crunch-crunch-crunch";
-}
-void Cat::sleep()
-{
-    std::cout << "Z-z-Z-z";
-}
-void Cat::run()
-{
-    std::cout << "*Thrump-thrump*";
-}
-void Cat::sound()
-{
-    std::cout << "purr";
-}
-void Cat::info()
-{
-    std::string breed; name; date_of_birth; fur_color; eyes_color; weight; height; length;
-}
-
 
 
 
 int main()
 {
-    Cat Bun
+    Cat boba
     {
-        std::string breed = "brown cat"; 
-        std::string name = "Bun";
-        std::string date_of_birth = "2010_12_03";
-        std::string fur_color = "orange";
-        std::string eyes_color = "dark brown";
-        std::string weight = "4 kg";
-        std::string height = "30 cm";
-        std::string length = "76 cm";
-    }      
-}
+        .breed = "Turkish Van",
+        .date_of_birth = "2010_12_03",        
+        .name = "Boba",
+        .fur_color = "white & orange",
+        .eyes_color = "dark brown",
+        .weight = "4 kg",
+        .height = "23 cm",
+        .length = "56 cm";
+    };
+
+    Cat richi
+    {
+        .breed = "Japanese Bobtail",
+        .date_of_birth = "2019_08_20",        
+        .name = "Richi",
+        .fur_color = "black & white",
+        .eyes_color = "green",
+        .weight = "5 kg",
+        .height = "25 cm",
+        .length = "45 cm";
+    };
+
+    Cat mimi 
+    {
+        .breed = "Calico",
+        .date_of_birth = "2015_02_28",        
+        .name = "Mimi",
+        .fur_color = "black & white & orange",
+        .eyes_color = "yellow",
+        .weight = "3.5 kg",
+        .height = "24 cm",
+        .length = "62 cm";
+    };
+
+    Cat rosie
+    {
+        .breed = "Oriental Short Hair",
+        .date_of_birth = "2017_03_15",        
+        .name = "Rosie",
+        .fur_color = "white & beige & black",
+        .eyes_color = "green",
+        .weight = "4.2 kg",
+        .height = "26 cm",
+        .length = "74 cm";
+    };
+};
+
