@@ -13,19 +13,19 @@ meters. Use symbolic constants to represent the various conversion factors.*/
 int main()
 {
     const int INCHES_PER_FOOD{12};
-    const double METERS_PER_INCHES{0.0254};
+    const double METERS_PER_INCHE{0.0254};
     double part_of_height_in_feet;
     double part_of_height_in_inches;
     std::cout << "Please, enter your weight height in feed and inches:\n";
     std::cin >> part_of_height_in_feet >> part_of_height_in_inches;
 
-    const double POUNDS_PER_KILOGRAMS{2.2};
+    const double POUNDS_PER_KILOGRAM{2.2};
     double height_in_inches = part_of_height_in_feet * INCHES_PER_FOOD + part_of_height_in_inches;
-    double height_in_meters = height_in_inches * METERS_PER_INCHES;
+    double height_in_meters = height_in_inches * METERS_PER_INCHE;
     double weight_in_pounds;
     std::cout << "Please, enter your weight in pounds:\n";
     std::cin >> weight_in_pounds;
-    double weight_in_kilograms = weight_in_pounds / POUNDS_PER_KILOGRAMS;
+    double weight_in_kilograms = weight_in_pounds / POUNDS_PER_KILOGRAM;
     double square_of_height_in_meters = pow(height_in_meters, 2);
     double bmi = weight_in_kilograms / square_of_height_in_meters;
     std::cout << "So, your BMI is: " << bmi << "\nCongratulations!\n";
