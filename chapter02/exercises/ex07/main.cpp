@@ -8,3 +8,24 @@
 // Enter the number of hours: 9
 // Enter the number of minutes: 28
 // Time: 9:28
+
+#include <iostream>
+
+void time(int number_of_hr, int number_of_min);
+
+int main()
+{
+    int number_of_hr;
+    std::cout << "Enter the number of hours: ";
+    std::cin >> number_of_hr;
+    int number_of_min;
+    std::cout << "Enter the number of minutes: ";
+    std::cin >> number_of_min;
+    time(number_of_hr, number_of_min);
+}
+
+
+void time(int number_of_hr, int number_of_min)
+{
+    std::cout << "Time: " << number_of_hr << ":" << number_of_min << "\n";
+}
