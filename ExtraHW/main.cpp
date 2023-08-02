@@ -56,11 +56,13 @@ struct Cat
     {
         std::cout << "Say hi to " << name << "."
                   << "I think she likes you a lot."
-                  << "\n";
+                  << "\n\n";
     };
 };
 
 using Cats = std::vector<Cat>;
+void print(Cats const &cats);
+void print(Cat const &cat);
 
 int main()
 {
@@ -108,5 +110,21 @@ int main()
 
     };
 
-    std::vector<Cat> cats{boba, richi, mimi, rosie};
+    Cats cats{boba, richi, mimi, rosie}; 
+
+     print(cats);
 };
+
+void print(Cats const &cats)
+{
+    for (auto const &Cat : cats)
+    {
+        Cat.show_info();
+    }
+    
+}
+
+void print(Cat const &cat)
+{
+    cat.show_info();
+}
