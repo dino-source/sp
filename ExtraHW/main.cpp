@@ -109,16 +109,15 @@ int main()
 
     };
 
-    Cats cats{boba, richi, mimi, rosie}; 
+    Cats cats{boba, richi, mimi, rosie};
 
-     print(cats);
+    print(cats);
 };
 
 void print(Cats const &cats)
 {
-    for (auto const &Cat : cats)
+    for (auto const &cat : cats)
     {
-        Cat.show_info();
+        cat.show_info();
     }
-    
 }
