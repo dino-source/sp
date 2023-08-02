@@ -27,6 +27,7 @@ Use 'if-else' statement where applicable.
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cmath>
 
 using Delim = std::string const &;
 struct Dog
