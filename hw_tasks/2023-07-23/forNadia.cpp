@@ -31,15 +31,15 @@ Use 'if-else' statement where applicable.
 using Delim = std::string const &;
 struct Dog
 {
-    std::string breed {"Malamute"};
-    std::string name {"Rex"};
-    std::string date_of_birth {"2015-08-25"};
-    std::string fur_color {"white"};
-    std::string eyes_color {"blue"};
-    int age {5};
-    int training_a_week {2};
-    double weight {28.5};
-    double height {52};
+    std::string breed{"Malamute"};
+    std::string name{"Rex"};
+    std::string date_of_birth{"2015-08-25"};
+    std::string fur_color{"white"};
+    std::string eyes_color{"blue"};
+    int age{5};
+    int training_a_week{2};
+    double weight{28.5};
+    double height{52};
 
     void introduce_dog_pet() const
     {
@@ -48,23 +48,23 @@ struct Dog
         std::cout << '\n';
     }
 
-
     void report() const
     {
-        double awards = training_a_week * 0.5 * age;
-        std::cout << "Now it is training. It got " << awards << " awards.\n\n";
+        long awards = std::lround(training_a_week * 0.5 * age);
+        std::cout
+            << "Now it is training. It got "
+            << awards
+            << " awards.\n\n";
     }
 };
-
 
 using Dogs = std::vector<Dog>;
 void print(Dogs const &dogs, Delim delim = "\n\n");
 void print(Dog const &dog, Delim delim = "\n");
 
-int main ()
+int main()
 {
-    Dog gina
-    {
+    Dog gina{
         .breed = "sheperd",
         .name = "Gina",
         .date_of_birth = "2014-03-08",
@@ -73,11 +73,9 @@ int main ()
         .age = 9,
         .training_a_week = 2,
         .weight = 22.5,
-        .height = 45
-    };
+        .height = 45};
 
-    Dog art
-    {
+    Dog art{
         .breed = "golden retriever",
         .name = "Art",
         .date_of_birth = "2021-05-31",
@@ -86,11 +84,9 @@ int main ()
         .age = 3,
         .training_a_week = 4,
         .weight = 35,
-        .height = 54.5
-    };
+        .height = 54.5};
 
-    Dog feliny
-    {
+    Dog feliny{
         .breed = "dachshund",
         .name = "Feliny",
         .date_of_birth = "2019-04-25",
@@ -99,11 +95,9 @@ int main ()
         .age = 5,
         .training_a_week = 1,
         .weight = 6,
-        .height = 23.5
-    };
+        .height = 23.5};
 
-    Dog marta
-    {
+    Dog marta{
         .breed = "metis",
         .name = "Marta",
         .date_of_birth = "2015-03-20",
@@ -112,17 +106,14 @@ int main ()
         .age = 8,
         .training_a_week = 3,
         .weight = 36,
-        .height = 48
-    };
+        .height = 48};
 
-    std::vector<Dog> dogs {gina, art, feliny, marta};
+    std::vector<Dog> dogs{gina, art, feliny, marta};
 
     print(dogs);
-    
 };
 
-
-void print(Dogs const &dogs, Delim delim) 
+void print(Dogs const &dogs, Delim delim)
 {
     for (auto const &dog : dogs)
     {
@@ -132,7 +123,7 @@ void print(Dogs const &dogs, Delim delim)
     std::cout << delim;
 }
 
-void print(Dog const &dog, Delim delim) 
+void print(Dog const &dog, Delim delim)
 {
     dog.introduce_dog_pet();
     std::cout << delim;
