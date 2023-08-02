@@ -62,7 +62,6 @@ struct Cat
 
 using Cats = std::vector<Cat>;
 void print(Cats const &cats);
-void print(Cat const &cat);
 
 int main()
 {
@@ -122,9 +121,4 @@ void print(Cats const &cats)
         Cat.show_info();
     }
     
-}
-
-void print(Cat const &cat)
-{
-    cat.show_info();
 }
