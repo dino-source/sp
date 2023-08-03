@@ -4,8 +4,15 @@ What to do:
 
 How to do: 
     Move the code we have in main function to the following functions:
-    double convert(double money_amount, double currency_exchange_rate);
-    void print_message(std::string const &message);
+        Money convert(Money amount, ExchangeRate exchange_rate);
+        void print(Message message);
+        void print(Money converted_amount, Delimiter delim);
+
+    Use the following type-aliases:
+        using Message = std::string const &;
+        using Delimiter = std::string const &;
+        using Money = double;
+        using ExchangeRate = double;
 */
 
 
