@@ -1,3 +1,14 @@
+/*
+What to do:
+    Implement currency converter.
+
+How to do: 
+    Move the code we have in main function to the following functions:
+    double convert(double money_amount, double currency_exchange_rate);
+    void print_message(std::string const &message);
+*/
+
+
 #include <iostream>
 
 constexpr double USD_TO_EUR = 0.91;
