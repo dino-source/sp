@@ -11,4 +11,7 @@ elephant flea is very fond of hills.
 
 Print to the terminal how many steps make mammoth and elephant flea together
 during 1 minute in each type of landscape (forest, tundra, hills).
+
+Recommendations:
+use variables, named constants and functions to solve the problem.
 */
