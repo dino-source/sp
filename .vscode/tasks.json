@@ -22,7 +22,7 @@
                 "-Wmissing-noreturn",
                 "-Wnoexcept",
                 "-fdiagnostics-color=always",
-                "${file}",
+                "${fileDirname}/*.cpp",
                 "-o",
                 "a.out"
             ],
