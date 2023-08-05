@@ -8,9 +8,9 @@ struct Warrior
 {
     explicit Warrior(std::string n)
         : name{n}
-        , life{random(70.0, 90.0)}
-        , strength{random(3.0, 5.0)}
-        , damage{random(1.1, 2.5)}
+        , life{get_random_number(70.0, 90.0)}
+        , strength{get_random_number(3.0, 5.0)}
+        , damage{get_random_number(1.1, 2.5)}
     {
     }
 
@@ -18,13 +18,13 @@ struct Warrior
     {
         std::cout << name << " attacks!!!!!!!!\n";
 
-        chance_to_critical_strike = random(0.1, 199.9);
+        chance_to_critical_strike = get_random_number(0.1, 199.9);
         if (chance_to_critical_strike > 100.0)
         {
             damage = strength * 2;
         }
 
-        enemy.chance_to_block = random(0.1, 199.9);
+        enemy.chance_to_block = get_random_number(0.1, 199.9);
         if (enemy.chance_to_block > 100.0)
         {
             damage /= 2;
