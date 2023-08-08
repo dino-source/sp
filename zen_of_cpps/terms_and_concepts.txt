@@ -106,5 +106,13 @@ Misc:
     const qualifier
     escape sequences (\n \t \b \a \" \r \v)
     expression
-    keywords: auto, using, const, constexpr, return, struct, break and so on
+    keywords:
+        auto
+        using
+        const
+        constexpr
+        return
+        struct
+        break
+        (see full list of C++ keywords here: https://en.cppreference.com/w/cpp/keyword )
     namespaces
