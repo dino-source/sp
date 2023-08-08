@@ -1,0 +1,108 @@
+One month passed since we've started our lessons. To this point all of you
+supposed to know (or at least to be familiar with) the following topics,
+terms and concepts:
+
+Operators:
+    arithmetic operators:
+        operator+
+        operator-
+        operator*
+        operator/
+        operator%
+    assignment operator:
+        operator=
+    decrement operator:
+        operator--
+    comparison operators:
+        operator>
+        operator<
+        operator<=
+        operator=>
+        operator==
+        operator!=
+    extraction operator:
+        operator>>
+    increment operator:
+        operator++
+    insertion operator:
+        operator<<
+    scope resolution operator:
+        operator::
+    address-of operator:
+        operator&
+    subsript operator:
+        operator[]
+    call operator:
+        operator()
+
+Functions:
+    function
+    function call
+    function declaration
+    function definition
+    function header
+    function body
+    function name
+    function overloading
+    function parameter list
+    function parameters
+    function return type
+    passing parameters by reference
+    passing parameters by value
+    void functions
+
+Statements:
+    return statement
+
+    compound statements:
+        if statement
+        if else statement
+        nested if else statements
+        switch statement
+        do while loop
+        while loop
+        for loop
+        range based for loop
+
+Types:
+    fundamental types (built-in types)
+    built-in types: int, char, double, bool
+    user-defined types:
+        class
+        enum
+        enum class
+        struct
+        members of struct:
+            data members
+            member functions
+
+Literals:
+    boolean literals (true and false)
+    char literals (single quoted characters like 'a' or '5')
+    float pointing literals (like 3.14 or 2.5)
+    integer literals (for example 42 or 777)
+    string literals ("double quoted text")
+
+Variables:
+    variable declaration
+    variable initialization
+    value stored in variable
+
+Separate compilation:
+    header files
+    source files
+    file guards (#ifndef, #define, #endif pre-processor directives)
+    pre-processor directives (#include)
+
+Standard Library facilities:
+    std::cout and std::cin objects from iostream header
+    std::string type from <string> header
+    std::vector type from <vector> header
+
+Misc:
+    block (code snippet between two curly braces)
+    const qualifier
+    escape sequences (\n \t \b \a \ " \r \v)
+    expression
+    keywords: auto, using, const, constexpr, return, struct, break and so on
+    namespaces
