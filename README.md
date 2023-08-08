@@ -14,5 +14,6 @@ C++ studies using Stephen Prata's "C++ Primer Plus" (6th Edition)
 
 6) Debugger
 7) Build systems (Make, CMake)
+8) Unit-testing
 
 English skills mastering is assumed as student's independent work.
