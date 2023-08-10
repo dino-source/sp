@@ -6,6 +6,12 @@ void print(std::string const &patient_data, std::string const &delim);
 std::string get_string_from_user();
 using PatientData = std::vector<std::string>;
 PatientData get_patient_data(PatientData &patient_properties);
+#include <vector>
+
+void print(std::string const &patient_data, std::string const &delim);
+std::string get_string_from_user();
+using PatientData = std::vector<std::string>;
+PatientData get_patient_data(PatientData &patient_properties);
 
 int main()
 {
@@ -31,6 +37,18 @@ std::string get_string_from_user()
     return user_input;
 }
 
+PatientData get_patient_data(PatientData &patient_properties)
+{
+    PatientData patient_data;
+    std::string delim = ": ";
+    for (size_t i = 0; i < patient_properties.size(); i++)
+    {
+        print(patient_properties[i], delim);
+        std::string user_input = get_string_from_user();
+        patient_data.push_back(user_input);
+    }
+    return patient_data;
+}
 PatientData get_patient_data(PatientData &patient_properties)
 {
     PatientData patient_data;
