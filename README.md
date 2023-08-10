@@ -10,7 +10,7 @@ C++ studies using Stephen Prata's "C++ Primer Plus" (6th Edition)
 4) VS Code (keyboard shorcuts, GUI)
 5) Ubuntu (console commands, GUI, keyboard shorcuts)
 
-## We're going to add to this list two more items later on:
+## We're going to add to this list three more items later on:
 
 6) Debugger
 7) Build systems (Make, CMake)
