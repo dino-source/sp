@@ -1,4 +1,5 @@
 #include "helper_functions.h"
+#include <iostream>
 
 void print(std::string const &patient_data, std::string const &delim)
 {
