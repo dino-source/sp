@@ -5,11 +5,12 @@
 void print(std::string const &patient_data, std::string const &delim);
 std::string get_string_from_user();
 using PatientData = std::vector<std::string>;
+using PatientProperties = std::vector<std::string>;
 PatientData get_patient_data(PatientData &patient_properties);
 
 int main()
 {
-    std::vector<std::string> patient_properties{
+    PatientProperties patient_properties{
         "first name", "last name", "ID number", "phone number",
         "email", "occupation", "marital status", "date of birth"};
     print("Hello! My name is Rob Ott. I am your virtual psychologist.\n"
