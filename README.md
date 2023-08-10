@@ -2,7 +2,7 @@
 
 C++ studies using Stephen Prata's "C++ Primer Plus" (6th Edition)
 
-## This course is to master one's skills in the following areas:
+## This course is to hone one's skills in the following areas:
 
 1) C++ programming language (C++ primer with code examples and code exercises)
 2) Git (git console commands, VS Code git facilities)
