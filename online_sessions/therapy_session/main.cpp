@@ -7,5 +7,5 @@ int main()
           "The first step we have to do is to fill a questionnaire.\n"
           "It'll be a starting point in your therapy. So let's start.\n\n");
     Patient p;
-    PatientData patient_data = get_patient_data(p.patient_properties);
+    auto patient_data = p.get_patient_data();
 }
