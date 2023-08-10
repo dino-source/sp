@@ -5,14 +5,14 @@
 
 void run_app(); // function prototype
 
-void run_app() // function definition
+inline void run_app() // function definition
 {
     Cook cook;
     Waiter waiter;
     Client client(&waiter); // arg in ctor is waiter object's address!
                             // so parameter in ctor is a pointer!
 
-    while (!client.is_ready_to_order)
+    while (!client.is_ready_to_order())
     {
         waiter.approach_client(client);
     }
