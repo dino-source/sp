@@ -19,7 +19,7 @@ elephant flea is very fond of hills.
 DINO:
     which means mammoth makes 12 steps per minute (60/5=12) in the hills
     while elephant flea makes 180 steps per minute (5*60=300) in the hills
-    so the answer for the 3rd question is: 15+180=312 steps
+    so the answer for the 3rd question is: 12+300=312 steps
 
 Print to the terminal how many steps make mammoth and elephant flea together
 during 1 minute in each type of landscape (forest, tundra, hills).
@@ -44,15 +44,10 @@ enum Landscape
     UNKNOWN_LANDSCAPE_TYPE = -1,
 }; // enum Landscape
 
-namespace mammoth
+class Mammoth
 {
-    constexpr int SECONDS_PER_ONE_STEP_IN_FOREST = 4;
-    constexpr int SECONDS_PER_ONE_STEP_IN_TUNDRA = 3;
-    constexpr int SECONDS_PER_ONE_STEP_IN_HILLS = 5;
-
-    int steps_per_minute_in(int landscape_type);
-
-    int steps_per_minute_in(int landscape_type)
+public:
+    static int steps_per_minute_in(int landscape_type)
     {
         int steps_per_minute{};
         switch (landscape_type)
@@ -73,17 +68,17 @@ namespace mammoth
         }
         return steps_per_minute;
     }
-} // namespace mammoth
 
-namespace flea
+private:
+    static const int SECONDS_PER_ONE_STEP_IN_FOREST = 4;
+    static const int SECONDS_PER_ONE_STEP_IN_TUNDRA = 3;
+    static const int SECONDS_PER_ONE_STEP_IN_HILLS = 5;
+}; // class Mammoth
+
+class Flea
 {
-    constexpr int STEPS_PER_ONE_SECOND_IN_FOREST = 3;
-    constexpr int STEPS_PER_ONE_SECOND_IN_TUNDRA = 3;
-    constexpr int STEPS_PER_ONE_SECOND_IN_HILLS = 5;
-
-    int steps_per_minute_in(int landscape_type);
-
-    int steps_per_minute_in(int landscape_type)
+public:
+    static int steps_per_minute_in(int landscape_type)
     {
         int steps_per_minute{};
         switch (landscape_type)
@@ -104,18 +99,23 @@ namespace flea
         }
         return steps_per_minute;
     }
-} // namespace flea
+
+private:
+    static const int STEPS_PER_ONE_SECOND_IN_FOREST = 3;
+    static const int STEPS_PER_ONE_SECOND_IN_TUNDRA = 3;
+    static const int STEPS_PER_ONE_SECOND_IN_HILLS = 5;
+}; // class Flea
 
 int main()
 {
     using enum Landscape;
     int steps{};
     print("Mammoth and elephant flea make:\n");
-    steps = mammoth::steps_per_minute_in(FOREST) + flea::steps_per_minute_in(FOREST);
+    steps = Mammoth::steps_per_minute_in(FOREST) + Flea::steps_per_minute_in(FOREST);
     print(steps, "in the forest");
-    steps = mammoth::steps_per_minute_in(TUNDRA) + flea::steps_per_minute_in(TUNDRA);
+    steps = Mammoth::steps_per_minute_in(TUNDRA) + Flea::steps_per_minute_in(TUNDRA);
     print(steps, "in the tundra");
-    steps = mammoth::steps_per_minute_in(HILLS) + flea::steps_per_minute_in(HILLS);
+    steps = Mammoth::steps_per_minute_in(HILLS) + Flea::steps_per_minute_in(HILLS);
     print(steps, "in the hills");
 }
 
