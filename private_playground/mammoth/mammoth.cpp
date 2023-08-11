@@ -1,25 +1,13 @@
 /*
 When mammoth walks through the forest it makes 1 step per 4 seconds, while
 elephant flea walking through the mammoth's body makes 3 steps per 1 second.
-DINO:
-    which means mammoth makes 15 steps per minute (60/4=15) in the forest
-    while elephant flea makes 180 steps per minute (3*60=180) in the forest
-    so the answer for the 1st question is: 15+180=195 steps
 
 When mammoth walks through the tundra it makes 1 step per 3 seconds, while
 elephant flea's speed remains the same.
-DINO:
-    which means mammoth makes 20 steps per minute (60/3=20) in the tundra
-    while elephant flea makes 180 steps per minute (3*60=180) in the tundra
-    so the answer for the 2nd question is: 15+180=200 steps
 
 When mammoth walks through the hills it makes 1 step per 5 seconds, while
 elephant flea's speed increasing: it makes 5 steps per 1 second, because
 elephant flea is very fond of hills.
-DINO:
-    which means mammoth makes 12 steps per minute (60/5=12) in the hills
-    while elephant flea makes 180 steps per minute (5*60=300) in the hills
-    so the answer for the 3rd question is: 12+300=312 steps
 
 Print to the terminal how many steps make mammoth and elephant flea together
 during 1 minute in each type of landscape (forest, tundra, hills).
