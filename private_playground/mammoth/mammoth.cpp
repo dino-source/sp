@@ -108,33 +108,15 @@ namespace flea
 
 int main()
 {
-    print("Please choose the integer to calculate the number of steps have been made\n"
-          "by a mammoth and a elephant flea together in which type of landscape:\n"
-          "Forest - 1\n"
-          "Tundra - 2\n"
-          "Hills - 3\n\n");
-    int user_choice{};
-    std::cin >> user_choice;
-
-    switch (int steps{}; user_choice)
-    {
-        using namespace landscape;
-    case FOREST:
-        steps = mammoth::steps_per_minute_in(FOREST) + flea::steps_per_minute_in(FOREST);
-        print(steps, "in the forest");
-        break;
-    case TUNDRA:
-        steps = mammoth::steps_per_minute_in(TUNDRA) + flea::steps_per_minute_in(TUNDRA);
-        print(steps, "in the tundra");
-        break;
-    case HILLS:
-        steps = mammoth::steps_per_minute_in(HILLS) + flea::steps_per_minute_in(HILLS);
-        print(steps, "in the hills");
-        break;
-    default:
-        print("\nThere is no such kind of landscape. To try again re-run the app.\n");
-        break;
-    }
+    using namespace landscape;
+    int steps{};
+    print("Mammoth and elephant flea make:\n");
+    steps = mammoth::steps_per_minute_in(FOREST) + flea::steps_per_minute_in(FOREST);
+    print(steps, "in the forest");
+    steps = mammoth::steps_per_minute_in(TUNDRA) + flea::steps_per_minute_in(TUNDRA);
+    print(steps, "in the tundra");
+    steps = mammoth::steps_per_minute_in(HILLS) + flea::steps_per_minute_in(HILLS);
+    print(steps, "in the hills");
 }
 
 void print(std::string const &message)
@@ -144,7 +126,5 @@ void print(std::string const &message)
 
 void print(int const steps, std::string const &in_specific_landscape)
 {
-    std::cout
-        << "\nMammoth and elephant flea made " << steps
-        << " steps per minute " << in_specific_landscape << ".\n";
+    std::cout << "\t" << steps << " steps per minute " << in_specific_landscape << ".\n";
 }
