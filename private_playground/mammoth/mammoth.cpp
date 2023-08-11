@@ -36,13 +36,13 @@ void print(int const steps, std::string const &in_specific_landscape);
 
 constexpr int ONE_MINUTE{60};
 
-namespace landscape
+enum Landscape
 {
-    constexpr int UNKNOWN_LANDSCAPE_TYPE{-1};
-    constexpr int FOREST = 1;
-    constexpr int TUNDRA = 2;
-    constexpr int HILLS = 3;
-} // namespace landscape
+    FOREST = 1,
+    TUNDRA = 2,
+    HILLS = 3,
+    UNKNOWN_LANDSCAPE_TYPE = -1,
+}; // enum Landscape
 
 namespace mammoth
 {
@@ -57,7 +57,7 @@ namespace mammoth
         int steps_per_minute{};
         switch (landscape_type)
         {
-            using namespace landscape;
+            using enum Landscape;
         case FOREST:
             steps_per_minute = ONE_MINUTE / SECONDS_PER_ONE_STEP_IN_FOREST;
             break;
@@ -88,7 +88,7 @@ namespace flea
         int steps_per_minute{};
         switch (landscape_type)
         {
-            using namespace landscape;
+            using enum Landscape;
         case FOREST:
             steps_per_minute = ONE_MINUTE * STEPS_PER_ONE_SECOND_IN_FOREST;
             break;
@@ -108,7 +108,7 @@ namespace flea
 
 int main()
 {
-    using namespace landscape;
+    using enum Landscape;
     int steps{};
     print("Mammoth and elephant flea make:\n");
     steps = mammoth::steps_per_minute_in(FOREST) + flea::steps_per_minute_in(FOREST);
