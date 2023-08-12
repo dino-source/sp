@@ -7,8 +7,7 @@ Note that 100 kilometers is 62.14 miles, and 1 gallon is 3.875 liters. Thus, 19
 mpg is about 12.4 l/100 km, and 27 mpg is about 8.7 l/100 km.
 
 Made-up example of how it should work:
-Enter the number of fuel(l): 12.4
-Enter the number of distance(km): 100
+Enter the number of fuel(l) per 100km: 12.4
 12.4 l/100 km is 19 miles per gallon.
 
 Напишите программу, которая запрашивает расход бензина в европейском
@@ -23,27 +22,28 @@ Enter the number of distance(km): 100
 #include <iostream>
 #include <string>
 
-using Message = std::string const &;
 using Gasoline = double;
-using Converting = double;
-void print(Message message);
+using Message = std::string const &;
 
-namespace converting
-{
-    constexpr double gallon_to_liters{3.875};
-    constexpr double hundred_km_to_miles{62.14};
-}
+Gasoline converting(Gasoline fuel_amount);
+void print(Message message);
 
 int main()
 {
+    print("Enter the number of fuel(l) per 100km: ");
+    Gasoline fuel_amount{};
+    std::cin >> fuel_amount;
+    std::cout << fuel_amount << " l/100 km is " << converting << " miles per gallon.\n";
+}
+
+Gasoline converting(Gasoline fuel_amount)
+{
+    constexpr double liters_to_gallon = 3.875;
+    constexpr double hundred_km_to_miles = 62.14;
+    return liters_to_gallon * hundred_km_to_miles * fuel_amount;
 }
 
 void print(Message message)
 {
     std::cout << message;
-}
-
-Gasoline convert(Gasoline amount, Converting converting)
-{
-    return amount * converting;
 }
