@@ -18,29 +18,43 @@ Enter the number of fuel(l) per 100km: 12.4
 соответствуют 62.14 милям, а 1 галлон составляет 3.875 литра.
 Таким образом, 19 миль на галлон примерно равно 12.4 литров на 100 км,
 а 27 миль на галлон —примерно 8.7 литров на 100 км.*/
+/* 12.4 L -> 100 km
+ 1 L -> (100 / 12.4) km
+1 L -> 8.064516129 km
+1 L -> 5.011290323 miles
+3.875 L -> (5.011290323 * 3.875) miles
+1 gallon -> 19.41875 miles
+*/
 
 #include <iostream>
 #include <string>
 
 using Gasoline = double;
+using Distance = double;
 using Message = std::string const &;
 
-Gasoline converting(Gasoline fuel_amount);
+Distance converting_liters_per_km_to_miles_per_gallon(Gasoline fuel_amount_in_liters);
 void print(Message message);
 
 int main()
 {
     print("Enter the number of fuel(l) per 100km: ");
-    Gasoline fuel_amount{};
-    std::cin >> fuel_amount;
-    std::cout << fuel_amount << " l/100 km is " << converting << " miles per gallon.\n";
+    Gasoline fuel_amount_in_liters{};
+    std::cin >> fuel_amount_in_liters;
+    Distance miles_per_gallon = converting_liters_per_km_to_miles_per_gallon(fuel_amount_in_liters);
+    std::cout << fuel_amount_in_liters << " l/100 km is " << miles_per_gallon << " miles per gallon.\n";
 }
 
-Gasoline converting(Gasoline fuel_amount)
+Distance converting_liters_per_km_to_miles_per_gallon(Gasoline fuel_amount_in_liters)
 {
-    constexpr double liters_to_gallon = 3.875;
-    constexpr double hundred_km_to_miles = 62.14;
-    return liters_to_gallon * hundred_km_to_miles * fuel_amount;
+    constexpr Distance ONE_HUNDRED_MILES = {100};
+    constexpr Distance ONE_KM_TO_MILES = {0.6214};
+    constexpr Gasoline LITERS_IN_ONE_GALLON = {3.875};
+
+    Distance distance_in_km_per_one_liter_of_fuel = ONE_HUNDRED_MILES / fuel_amount_in_liters;
+    Distance distance_in_miles_per_one_liter_of_fuel = distance_in_km_per_one_liter_of_fuel * ONE_KM_TO_MILES;
+    Distance distance_in_miles_per_one_gallon_of_fuel = distance_in_miles_per_one_liter_of_fuel * LITERS_IN_ONE_GALLON;
+    return distance_in_miles_per_one_gallon_of_fuel;
 }
 
 void print(Message message)
