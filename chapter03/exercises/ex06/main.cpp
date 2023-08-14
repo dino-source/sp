@@ -14,11 +14,11 @@ and then report the result European style, in liters per 100 kilometers.
 int main()
 {
     std::cout << "Enter the number of driven miles: ";
-    int distance;
+    double distance;
     std::cin >> distance;
     std::cout << "Enter the amount of fuel consumed: ";
-    int gallons_of_gasoline;
+    double gallons_of_gasoline;
     std::cin >> gallons_of_gasoline;
-    int number_of_miles_per_gallon = distance / gallons_of_gasoline;
-    std::cout << "Your car has gotten " << number_of_miles_per_gallon << " miles per gallon";
+    double number_of_miles_per_gallon = distance / gallons_of_gasoline;
+    std::cout << "Your car has gotten " << number_of_miles_per_gallon << " miles per gallon\n";
 }
