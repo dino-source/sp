@@ -33,7 +33,7 @@ using Gasoline = double;
 using Distance = double;
 using Message = std::string const &;
 
-Distance converting_liters_per_km_to_miles_per_gallon(Gasoline fuel_amount_in_liters);
+Distance convert_liters_per_km_to_miles_per_gallon(Gasoline fuel_amount_in_liters);
 void print(Message message);
 
 int main()
@@ -41,17 +41,17 @@ int main()
     print("Enter the number of fuel(l) per 100km: ");
     Gasoline fuel_amount_in_liters{};
     std::cin >> fuel_amount_in_liters;
-    Distance miles_per_gallon = converting_liters_per_km_to_miles_per_gallon(fuel_amount_in_liters);
+    Distance miles_per_gallon = convert_liters_per_km_to_miles_per_gallon(fuel_amount_in_liters);
     std::cout << fuel_amount_in_liters << " l/100 km is " << miles_per_gallon << " miles per gallon.\n";
 }
 
-Distance converting_liters_per_km_to_miles_per_gallon(Gasoline fuel_amount_in_liters)
+Distance convert_liters_per_km_to_miles_per_gallon(Gasoline fuel_amount_in_liters)
 {
-    constexpr Distance ONE_HUNDRED_MILES = {100};
+    constexpr Distance ONE_HUNDRED_KILOMETERS = {100};
     constexpr Distance ONE_KM_TO_MILES = {0.6214};
     constexpr Gasoline LITERS_IN_ONE_GALLON = {3.875};
 
-    Distance distance_in_km_per_one_liter_of_fuel = ONE_HUNDRED_MILES / fuel_amount_in_liters;
+    Distance distance_in_km_per_one_liter_of_fuel = ONE_HUNDRED_KILOMETERS / fuel_amount_in_liters;
     Distance distance_in_miles_per_one_liter_of_fuel = distance_in_km_per_one_liter_of_fuel * ONE_KM_TO_MILES;
     Distance distance_in_miles_per_one_gallon_of_fuel = distance_in_miles_per_one_liter_of_fuel * LITERS_IN_ONE_GALLON;
     return distance_in_miles_per_one_gallon_of_fuel;
