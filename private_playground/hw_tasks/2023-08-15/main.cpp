@@ -21,7 +21,19 @@ Expected output:
 -5 8(
 Remaining functions should have the following prototypes:
 bool is_even(int n);
-bool is_positive(int n);*/
+bool is_positive(int n)
+
+1. Найти способ обойтись тремя инструкциями if-else.
+
+2. Найти способ обойтись двумя инструкциями if-else.
+
+3. Найти способ задействовать std::cout только 1 раз.
+
+4*. Найти способ сократить функцию print_emojis до одного цикла for,
+а этот цикл for - до трёх однострочных стейтментов,
+вообще не используя ни одной инструкции if-else.
+
+5*. Найти способ сократить функцию main до одного однострочного стейтмента.;*/
 
 #include <iostream>
 #include <vector>
@@ -59,17 +71,17 @@ void print_emojis(std::vector<int> intvector)
             std::cout << element << " :)\n";
         }
 
-        if (is_even(element) && !is_positive(element))
+        else if (is_even(element) && !is_positive(element))
         {
             std::cout << element << " :(\n";
         }
 
-        if (!is_even(element) && is_positive(element))
+        else if (!is_even(element) && is_positive(element))
         {
             std::cout << element << " 8)\n";
         }
 
-        if (!is_even(element) && !is_positive(element))
+        else
         {
             std::cout << element << " 8(\n";
         }
