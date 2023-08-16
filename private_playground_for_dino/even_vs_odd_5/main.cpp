@@ -24,33 +24,36 @@ bool is_positive(int n);
 */
 
 #include <iostream>
+#include <vector>
+
+using Item = int;
+using Numbers = std::vector<Item>;
+
+void print_emojis(Numbers const &numbers);
+bool is_even(Item n);
+bool is_positive(Item n);
 
 int main()
 {
-    using std::cout;
-    int n{7};
-    for (cout << "This is for loop!\n"; n--; cout << "We count numbers in strange manner: " << n << '\n')
+    print_emojis({14, 23, -4, 90, -7, 24, 33, 77, -6, 11, -5});
+}
+
+void print_emojis(Numbers const &numbers)
+{
+    for (Item number : numbers)
     {
-        // Yes, this is empty for loop body. It's weird, right? But it works!
+        char eyes = is_even(number) ? ':' : '8';
+        char mouth = is_positive(number) ? ')' : '(';
+        std::cout << number << ' ' << eyes << mouth << '\n';
     }
 }
 
-// void print_emojis(Numbers const &numbers)
-// {
-//     for (Item number : numbers)
-//     {
-//         char eyes = is_even(number) ? ':' : '8';
-//         char mouth = is_positive(number) ? ')' : '(';
-//         std::cout << number << ' ' << eyes << mouth << '\n';
-//     }
-// }
+bool is_even(Item n)
+{
+    return n % 2 == 0;
+}
 
-// bool is_even(Item n)
-// {
-//     return n % 2 == 0;
-// }
-
-// bool is_positive(Item n)
-// {
-//     return n > 0;
-// }
+bool is_positive(Item n)
+{
+    return n > 0;
+}
