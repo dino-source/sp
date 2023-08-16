@@ -38,18 +38,19 @@ bool is_positive(int n)
 #include <iostream>
 #include <vector>
 
-void print_emojis(std::vector<int> intvector);
+using Item = std::vector<int>;
 bool is_even(int n);
 bool is_positive(int n);
+void print_emojis(Item numbers);
 
 int main()
 {
-    std::vector<int> intvector{14, 23, -4, 90, -7, 24, 33, 77, -6, 11, -5};
+    Item numbers{14, 23, -4, 90, -7, 24, 33, 77, -6, 11, -5};
     // positive odd: 23, 33, 77, 11
     // negative odd: -7, -5
     // positive even: 14, 90, 24
     // negative even: -4, -6
-    print_emojis(intvector);
+    print_emojis(numbers);
 }
 
 bool is_even(int n)
@@ -62,28 +63,32 @@ bool is_positive(int n)
     return n > 0;
 }
 
-void print_emojis(std::vector<int> intvector)
+void print_emojis(Item numbers)
 {
-    for (int element : intvector)
+    for (int element : numbers)
     {
-        if (is_even(element) && is_positive(element))
+        if (is_even(element))
         {
-            std::cout << element << " :)\n";
-        }
-
-        else if (is_even(element) && !is_positive(element))
-        {
-            std::cout << element << " :(\n";
-        }
-
-        else if (!is_even(element) && is_positive(element))
-        {
-            std::cout << element << " 8)\n";
+            if (is_even(element) && is_positive(element))
+            {
+                std::cout << element << " :)\n";
+            }
+            else
+            {
+                std::cout << element << " :(\n";
+            }
         }
 
         else
         {
-            std::cout << element << " 8(\n";
+            if (!is_even(element) && is_positive(element))
+            {
+                std::cout << element << " 8)\n";
+            }
+            else
+            {
+                std::cout << element << " 8(\n";
+            }
         }
     }
 }
