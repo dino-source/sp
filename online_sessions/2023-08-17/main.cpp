@@ -7,12 +7,13 @@ bool is_odd(int n);
 bool is_positive(int n);
 bool is_negative(int n);
 bool is_zero(int n);
-bool is_multiple_by(int n, int m);
+bool is_multiply_by(int n, int m);
 
 int main()
 {
-    int x = 0;
-    std::cout << std::boolalpha << is_zero(x) << '\n';
+    int x = 9;
+    int y = 3;
+    std::cout << std::boolalpha << is_multiply_by(x, y) << '\n';
 }
 
 bool is_even(int n)
@@ -38,4 +39,9 @@ bool is_negative(int n)
 bool is_zero(int n)
 {
     return !n;
+}
+
+bool is_multiply_by(int n, int m)
+{
+    return (n % m == 0);
 }
