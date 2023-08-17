@@ -8,28 +8,25 @@ bool is_positive(int n);
 bool is_negative(int n);
 bool is_zero(int n);
 bool is_multiply_by(int n, int m);
+bool is_less_than_or_equal_to(int n, int m);
+bool is_greater_than_equal_to(int n, int m);
+bool is_not_equal_to(int n, int m);
+bool invert_sign(int n);
 
 int main()
 {
-    int x = 15;
-    int y = 4;
+    int x = 44;
+    int y = 15;
     std::cout << "Please enter an integer: ";
     int n;
     std::cin >> n;
-    if ((is_positive(n) && is_even(n)) || (is_positive(n) && is_multiply_by(n, 5)))
+    if (is_less_than_or_equal_to(n, x) && is_greater_than_equal_to(n, y))
     {
-        std::cout << ":>\n";
+        std::cout << ":)\n";
     }
     else
     {
-        if (is_negative(n) || is_zero(n))
-        {
-            std::cout << ":<\n";
-        }
-        else
-        {
-            std::cout << "0_0\n";
-        }
+        std::cout << ":(\n";
     }
 }
 
@@ -61,4 +58,24 @@ bool is_zero(int n)
 bool is_multiply_by(int n, int m)
 {
     return (n % m == 0);
+}
+
+bool is_less_than_or_equal_to(int n, int m)
+{
+    return (n <= m);
+}
+
+bool is_greater_than_equal_to(int n, int m)
+{
+    return (n >= m);
+}
+
+bool is_not_equal_to(int n, int m)
+{
+    return (n != m);
+}
+
+bool invert_sign(int n)
+{
+    return n * -1;
 }
