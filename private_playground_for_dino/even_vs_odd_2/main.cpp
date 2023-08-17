@@ -26,7 +26,7 @@ bool is_positive(int n);*/
 #include <iostream>
 #include <vector>
 
-void print_emojis(std::vector<int> intvector);
+void print_emojis(std::vector<int> const &intvector);
 bool is_even(int n);
 bool is_positive(int n);
 
@@ -50,7 +50,7 @@ bool is_positive(int n)
     return n > 0;
 }
 
-void print_emojis(std::vector<int> intvector)
+void print_emojis(std::vector<int> const &intvector)
 {
     for (int element : intvector)
     {
