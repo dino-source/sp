@@ -36,10 +36,6 @@ bool is_positive(Item n);
 int main()
 {
     Numbers numbers{14, 23, -4, 90, -7, 24, 33, 77, -6, 11, -5};
-    // positive odd: 23, 33, 77, 11
-    // negative odd: -7, -5
-    // positive even: 14, 90, 24
-    // negative even: -4, -6
     print_emojis(numbers);
 }
 
