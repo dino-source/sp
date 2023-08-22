@@ -17,28 +17,60 @@ Enter the number of seconds: 31600000
 в минуте используйте символические константы.*/
 
 #include <iostream>
+#include <vector>
+#include <string>
+
+using ResultType = long;
+void print(std::string const &message);
+void print(ResultType num, std::string const &description);
+ResultType get_number_from_user();
+std::vector<ResultType> seconds_to_days_hours_minutes_seconds(ResultType seconds);
 
 int main()
 {
-    const int seconds_in_one_minute = 60; // 60 seconds in one minute
-    const int minutes_in_one_hour = 60;
-    const int hours_in_one_day = 24;
-    int seconds_in_one_hour = seconds_in_one_minute * minutes_in_one_hour;                   // 3600
-    int seconds_in_one_day = seconds_in_one_minute * minutes_in_one_hour * hours_in_one_day; // 86400
+    print("Enter the number of seconds: ");
+    ResultType num_of_sec = get_number_from_user();
+    auto result = seconds_to_days_hours_minutes_seconds(num_of_sec);
+    print(num_of_sec, " seconds = ");
+    print(result[0], " days,\n");
+    print(result[1], " hours,\n");
+    print(result[2], " minutes,\n");
+    print(result[3], " seconds.\n");
+}
 
-    std::cout << "Enter the number of seconds: ";
-    long num_of_sec;
-    std::cin >> num_of_sec;
-    int days = num_of_sec / seconds_in_one_day;                                     // 31600000 / 86400 = 365
-    int seconds_in_those_days = days * seconds_in_one_day;                          // 365 days * 86400 = 31536000
-    int total_time_without_days = num_of_sec - seconds_in_those_days;               // 64000
-    int hours = (num_of_sec - seconds_in_those_days) / seconds_in_one_hour;         // 17 hours / 61200 seconds
-    int hours_in_sec = hours * seconds_in_one_hour;                                 // 61200
-    int minutes = (total_time_without_days - hours_in_sec) / seconds_in_one_minute; // 64000 - 61200 = 2800 sec / 60 = 46 min
-    int minutes_in_sec = minutes * seconds_in_one_minute;                           // 2760
-    int seconds = (total_time_without_days - hours_in_sec) - minutes_in_sec;
-    std::cout << num_of_sec << " seconds = " << days << " days,\n"
-              << hours << " hours,\n"
-              << minutes << " minutes,\n"
-              << seconds << " seconds.\n";
+void print(std::string const &message)
+{
+    std::cout << message;
+}
+
+void print(ResultType num, std::string const &description)
+{
+    std::cout << num << description;
+}
+
+ResultType get_number_from_user()
+{
+    ResultType number{};
+    std::cin >> number;
+    return number;
+}
+
+std::vector<ResultType> seconds_to_days_hours_minutes_seconds(ResultType num_of_sec)
+{
+    int const MINUTES_IN_ONE_HOUR = 60;
+    int const HOURS_IN_ONE_DAY = 24;
+    int const SECONDS_IN_ONE_MINUTE = 60;                                                          // 60 seconds in one minute
+    int const SECONDS_IN_ONE_HOUR = SECONDS_IN_ONE_MINUTE * MINUTES_IN_ONE_HOUR;                   // 3600
+    int const SECONDS_IN_ONE_DAY = SECONDS_IN_ONE_MINUTE * MINUTES_IN_ONE_HOUR * HOURS_IN_ONE_DAY; // 86400
+
+    ResultType days = num_of_sec / SECONDS_IN_ONE_DAY;                                     // 31600000 / 86400 = 365
+    ResultType seconds_in_those_days = days * SECONDS_IN_ONE_DAY;                          // 365 days * 86400 = 31536000
+    ResultType total_time_without_days = num_of_sec - seconds_in_those_days;               // 64000
+    ResultType hours = (num_of_sec - seconds_in_those_days) / SECONDS_IN_ONE_HOUR;         // 17 hours / 61200 seconds
+    ResultType hours_in_sec = hours * SECONDS_IN_ONE_HOUR;                                 // 61200
+    ResultType minutes = (total_time_without_days - hours_in_sec) / SECONDS_IN_ONE_MINUTE; // 64000 - 61200 = 2800 sec / 60 = 46 min
+    ResultType minutes_in_sec = minutes * SECONDS_IN_ONE_MINUTE;                           // 2760
+    ResultType seconds = (total_time_without_days - hours_in_sec) - minutes_in_sec;
+
+    return {days, hours, minutes, seconds};
 }
