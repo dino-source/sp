@@ -29,9 +29,16 @@ int main()
     std::cout << "Enter the number of seconds: ";
     long num_of_sec;
     std::cin >> num_of_sec;
-    int days = num_of_sec / seconds_in_one_day;
-    int seconds_in_those_days = days * seconds_in_one_day;
-    int hours = (num_of_sec - seconds_in_those_days) / seconds_in_one_hour;
+    int days = num_of_sec / seconds_in_one_day;                                     // 31600000 / 86400 = 365
+    int seconds_in_those_days = days * seconds_in_one_day;                          // 365 days * 86400 = 31536000
+    int total_time_without_days = num_of_sec - seconds_in_those_days;               // 64000
+    int hours = (num_of_sec - seconds_in_those_days) / seconds_in_one_hour;         // 17 hours / 61200 seconds
+    int hours_in_sec = hours * seconds_in_one_hour;                                 // 61200
+    int minutes = (total_time_without_days - hours_in_sec) / seconds_in_one_minute; // 64000 - 61200 = 2800 sec / 60 = 46 min
+    int minutes_in_sec = minutes * seconds_in_one_minute;                           // 2760
+    int seconds = (total_time_without_days - hours_in_sec) - minutes_in_sec;
     std::cout << num_of_sec << " seconds = " << days << " days,\n"
-              << hours << " hours,\n";
+              << hours << " hours,\n"
+              << minutes << " minutes,\n"
+              << seconds << " seconds.\n";
 }

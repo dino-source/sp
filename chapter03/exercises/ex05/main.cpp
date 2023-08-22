@@ -29,7 +29,7 @@ int main()
     std::cout << "Enter the population of US: ";
     long long US_population;
     std::cin >> US_population;
-    long double persent_of_the_world_population = 100.0 * US_population / worlds_population;
+    long double persent_of_the_world_population = 100.0L * US_population / worlds_population;
     std::cout << "The population of the US is " << persent_of_the_world_population
               << '%' << " of the world population\n";
 }
