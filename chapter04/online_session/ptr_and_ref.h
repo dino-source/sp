@@ -22,11 +22,11 @@ inline void play_with_ptr_and_ref()
     std::cout << "&ref_fruit: " << &ref_fruit << '\n';
 
     int apple = 1;
-    int banana = 2;
+    int melon = 2;
     int peach = 3;
     std::vector<int *> p_fruits;
     p_fruits.push_back(&apple);
-    p_fruits.push_back(&banana);
+    p_fruits.push_back(&melon);
     p_fruits.push_back(&peach);
     for (auto const p_fruit : p_fruits)
     {
