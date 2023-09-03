@@ -14,23 +14,23 @@ grade на одну градацию —т.е. на одну букву выше
 может ввести А, В или С, поэтому вам не нужно беспокоиться о пропус­ке между D и F.*/
 
 #include <iostream>
+#include <string>
 
 int main()
 {
-    const int char_size = 20;
     std::cout << "What is your first name? ";
-    char first_name[char_size];
-    std::cin.getline(first_name, char_size);
+    std::string first_name;
+    std::cin >> first_name;
 
     std::cout << "\nWhat is your last name? ";
-    char last_name[char_size];
-    std::cin.getline(last_name, char_size);
+    std::string last_name;
+    std::cin >> last_name;
 
     std::cout << "\nWhat grade do you deserve? ";
     char grade;
     std::cin >> grade;
 
-    std::cout << "\nWhat is your age? ";
+    std::cout << "\nHow old are you? ";
     int age;
     std::cin >> age;
 
