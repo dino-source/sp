@@ -14,11 +14,11 @@ int main()
 {
     std::cout << "Enter your first name: ";
     std::string first_name;
-    std::cin >> first_name;
+    getline(std::cin, first_name);
 
     std::cout << "Enter your last name: ";
     std::string last_name;
-    std::cin >> last_name;
+    getline(std::cin, last_name);
 
     std::string info_in_single_string = last_name + ", " + first_name;
     std::cout << "Here's the information in a single string: "

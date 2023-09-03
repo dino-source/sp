@@ -12,13 +12,14 @@ Here's the information in a single string: Fleming, Flip*/
 
 int main()
 {
+    const int SIZE = 30;
     std::cout << "Enter your first name: ";
-    char first_name[12];
-    std::cin >> first_name;
+    char first_name[SIZE];
+    std::cin.getline(first_name, SIZE);
 
     std::cout << "Enter your last name: ";
-    char last_name[20];
-    std::cin >> last_name;
+    char last_name[SIZE];
+    std::cin.getline(last_name, SIZE);
 
     strcat(last_name, ", ");
     std::cout << "Here's the information in a single string: "

@@ -9,7 +9,7 @@ int main()
     std::string dessert;
 
     std::cout << "Enter your name:\n";
-    std::cin >> name;
+    getline(std::cin, name);
 
     std::cout << "Enter your favorite dessert :\n";
     std::cin >> dessert;
