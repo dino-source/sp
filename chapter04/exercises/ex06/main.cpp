@@ -15,16 +15,16 @@ struct CandyBar
 
 int main()
 {
-    CandyBar desert[3]{
+    CandyBar dessert[3]{
         {"Tiramisu", 200.5, 566},
         {"Brownie", 50.8, 233},
         {"Chocho Pudding", 70.5, 271},
     };
 
-    std::cout << desert[0].name << ", " << desert[0].weight << ", "
-              << desert[0].calories << ".\n";
-    std::cout << desert[1].name << ", " << desert[1].weight << ", "
-              << desert[1].calories << ".\n";
-    std::cout << desert[2].name << ", " << desert[2].weight << ", "
-              << desert[2].calories << ".\n";
+    std::cout << dessert[0].name << ", " << dessert[0].weight << ", "
+              << dessert[0].calories << ".\n";
+    std::cout << dessert[1].name << ", " << dessert[1].weight << ", "
+              << dessert[1].calories << ".\n";
+    std::cout << dessert[2].name << ", " << dessert[2].weight << ", "
+              << dessert[2].calories << ".\n";
 }
