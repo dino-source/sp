@@ -18,7 +18,7 @@ inline void play_with_ptr_wrapper()
     unsigned int satellite{9};
     ptr = std::addressof(satellite); // assignment operator '='
     std::cout << "hlp::dereference(ptr): " << hlp::dereference(ptr) << '\n';
-    *ptr = 15;
+    hlp::assign(15u, ptr);
 
     double height{172.4};
     hlp::raw_ptr<double> p_height{std::addressof(height)};
