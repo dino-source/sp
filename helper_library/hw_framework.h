@@ -3,8 +3,8 @@
 
 struct Solution
 {
-    Solution() : m_chapter{2u}, m_exercise{1u};
-    Solution(unsigned ch, unsigned ex) : m_chapter{ch}, m_exercise{ex};
+    Solution();
+    Solution(unsigned ch, unsigned ex);
 
     void set_chapter(unsigned chapter) { m_chapter = chapter; }
     unsigned chapter() { return m_chapter; }
