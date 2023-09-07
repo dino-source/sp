@@ -26,4 +26,5 @@ int main()
     std::cout << "\nThe company name: " << NewPizza->company_name << '\n';
     std::cout << "Diameter: " << NewPizza->diameter << '\n';
     std::cout << "Weight: " << NewPizza->weight << '\n';
+    delete NewPizza;
 }
