@@ -9,10 +9,10 @@ int main()
     std::string dessert;
 
     std::cout << "Enter your name:\n";
-    getline(std::cin, name);
+    std::getline(std::cin, name);
 
     std::cout << "Enter your favorite dessert :\n";
-    getline(std::cin, dessert);
+    std::getline(std::cin, dessert);
 
     std::cout << "I have some delicious " << dessert;
     std::cout << " for you, " << name << ".\n";

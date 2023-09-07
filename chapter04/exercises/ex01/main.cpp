@@ -20,11 +20,11 @@ int main()
 {
     std::cout << "What is your first name? ";
     std::string first_name;
-    getline(std::cin, first_name);
+    std::getline(std::cin, first_name);
 
     std::cout << "\nWhat is your last name? ";
     std::string last_name;
-    getline(std::cin, last_name);
+    std::getline(std::cin, last_name);
 
     std::cout << "\nWhat grade do you deserve? ";
     char grade;
