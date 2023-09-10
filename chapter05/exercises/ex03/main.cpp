@@ -6,15 +6,15 @@
 
 int main()
 {
-    std::cout << "Enter a number: ";
-    int number;
+    std::cout << "Enter a number(type \"0\" to end a cycle): ";
+    int number = 0;
+    int sum = 0;
     std::cin >> number;
-    int sum;
-    for (int i = number; i != 0; i++)
+    for (; number != 0;)
     {
-        // sum += i;
-        // std::cout << "Now sum is: " << sum << '\n';
-        // при запуске происходит проблема из разряда присваивания
+        std::cout << "Sum = " << (sum += number) << '\n';
+        std::cout << "Enter a number: ";
+        std::cin >> number;
     }
     return 0;
 }
