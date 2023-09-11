@@ -7,6 +7,7 @@
 
 #include "../primer/chapter02/exercises/ex01/ex01.h"
 #include "../primer/chapter02/exercises/ex02/ex02.h"
+#include "../primer/chapter02/exercises/ex03/ex03.h"
 
 Solution::Solution() : m_chapter{2u}, m_exercise{1u}
 {
@@ -46,6 +47,9 @@ void Solution::choose_exercise_in_chapter02() const
         break;
     case 2:
         ch02::ex02::convert_furlongs_to_yards();
+        break;
+    case 3:
+        ch02::ex03::show_running_mice();
         break;
     default:
         break;
