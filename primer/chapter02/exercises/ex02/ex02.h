@@ -1,3 +1,6 @@
+#ifndef EXERCISE_02_H
+#define EXERCISE_02_H
+
 // Stephen Prata's "C++ Primer Plus" (Sixth Edition)
 
 // Chapter 2. Exercise 2.
@@ -7,17 +10,23 @@
 
 #include <iostream>
 
-namespace ch02::ex02
+namespace ch02
 {
-    inline void convert_furlongs_to_yards()
+    struct ex02
     {
-        int distance_in_furlongs;
-        constexpr int YARDS_IN_FURLONGS = 220;
+        void convert_furlongs_to_yards()
+        {
+            int distance_in_furlongs;
+            constexpr int YARDS_IN_FURLONGS = 220;
 
-        std::cout << "Please enter distance in furlongs:\n";
-        std::cin >> distance_in_furlongs;
-        std::cout << '\n';
-        int distance_in_yards = distance_in_furlongs * YARDS_IN_FURLONGS;
-        std::cout << "Then it's " << distance_in_yards << " yards in furlongs" << '\n';
-    }
+            std::cout << "Please enter distance in furlongs:\n";
+            std::cin >> distance_in_furlongs;
+            std::cout << '\n';
+            int distance_in_yards = distance_in_furlongs * YARDS_IN_FURLONGS;
+            std::cout << "So it's " << distance_in_yards << " yards in "
+                      << distance_in_furlongs << " furlongs.\n\n";
+        }
+    } ex02;
 } // namespace ch02::ex02
+
+#endif // EXERCISE_02_H

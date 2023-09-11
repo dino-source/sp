@@ -8,6 +8,10 @@
 #include "../primer/chapter02/exercises/ex01/ex01.h"
 #include "../primer/chapter02/exercises/ex02/ex02.h"
 #include "../primer/chapter02/exercises/ex03/ex03.h"
+#include "../primer/chapter02/exercises/ex04/ex04.h"
+#include "../primer/chapter02/exercises/ex05/ex05.h"
+#include "../primer/chapter02/exercises/ex06/ex06.h"
+#include "../primer/chapter02/exercises/ex07/ex07.h"
 
 Solution::Solution() : m_chapter{2u}, m_exercise{1u}
 {
@@ -43,13 +47,25 @@ void Solution::choose_exercise_in_chapter02() const
     switch (m_exercise)
     {
     case 1:
-        ch02::ex01::display_name_and_address();
+        ch02::ex01.display_name_and_address();
         break;
     case 2:
-        ch02::ex02::convert_furlongs_to_yards();
+        ch02::ex02.convert_furlongs_to_yards();
         break;
     case 3:
-        ch02::ex03::show_running_mice();
+        ch02::ex03.show_running_mice();
+        break;
+    case 4:
+        ch02::ex04.show_age_in_months();
+        break;
+    case 5:
+        ch02::ex05.run_temperature_converter();
+        break;
+    case 6:
+        ch02::ex06.run_space_distance_units_converter();
+        break;
+    case 7:
+        ch02::ex07.show_time_in_hours_and_seconds();
         break;
     default:
         break;

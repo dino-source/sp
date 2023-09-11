@@ -1,3 +1,6 @@
+#ifndef EXERCISE_03_H
+#define EXERCISE_03_H
+
 // Stephen Prata's "C++ Primer Plus" (Sixth Edition)
 
 // Chapter 2. Exercise 3.
@@ -13,27 +16,29 @@
 
 #include <iostream>
 
-namespace ch02::ex03
+namespace ch02
 {
-    void three_blind_mice(); // function prototype
-    void see_how_they_run(); // function prototype
-    void show_running_mice();
-
-    inline void show_running_mice()
+    struct ex03
     {
-        three_blind_mice();
-        three_blind_mice();
-        see_how_they_run();
-        see_how_they_run();
-    }
+        void show_running_mice()
+        {
+            three_blind_mice();
+            three_blind_mice();
+            see_how_they_run();
+            see_how_they_run();
+        }
 
-    inline void three_blind_mice()
-    {
-        std::cout << "Three blind mice\n";
-    }
+    private:
+        void three_blind_mice()
+        {
+            std::cout << "Three blind mice\n";
+        }
 
-    inline void see_how_they_run()
-    {
-        std::cout << "See how they run\n";
-    }
-} // namespace ch02::ex03
+        void see_how_they_run()
+        {
+            std::cout << "See how they run\n";
+        }
+    } ex03;
+} // namespace ch02
+
+#endif // EXERCISE_03_H
