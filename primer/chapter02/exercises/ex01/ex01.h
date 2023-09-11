@@ -6,8 +6,11 @@
 // privacy, a fictitious name and address).
 #include <iostream>
 
-
-int main()
+namespace ch02::ex01
 {
-    std::cout << "Name: Lada\nAddress: Lemon St.11\n";
-}
+    inline void display_name_and_address()
+    {
+        std::cout << "Name: Lada\nAddress: Lemon St.11\n";
+    }    
+} // namespace ch02::ex01
+

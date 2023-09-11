@@ -1,8 +1,12 @@
-#include "hw_framework.h"
-#include "hw_task_descriptions.h"
 #include <iostream>
 #include <vector>
 #include <string>
+
+#include "hw_framework.h"
+#include "hw_task_descriptions.h"
+
+#include "../primer/chapter02/exercises/ex01/ex01.h"
+#include "../primer/chapter02/exercises/ex02/ex02.h"
 
 Solution::Solution() : m_chapter{2u}, m_exercise{1u}
 {
@@ -28,14 +32,31 @@ void Solution::show_task_description() const
         // TODO: add m_exercise range checking
         std::cout << "\nStephen Prata's \"C++ Primer Plus\" (Sixth Edition).\n\n"
                   << "Chapter " << m_chapter << ". Exercise " << m_exercise << ".\n\n"
-                  << "Task description:\n"
+                  << "===== Task description =====\n"
                   << hw::task_descriptions[m_chapter - 1][m_exercise - 1] << "\n\n";
     }
 }
 
 void Solution::run_solution() const
 {
-    // TODO: implement this member function
-    std::cout << "Here is supposed to be a solved problem, but "
-        "this functionality has not been implemented yet.\n";
+    std::cout << "===== Possible solution =====\n";
+    switch (m_chapter)
+    {
+    case 2:
+        switch (m_exercise)
+        {
+        case 1:
+            ch02::ex01::display_name_and_address();
+            break;
+        case 2:
+            ch02::ex02::convert_furlongs_to_yards();
+            break;        
+        default:
+            break;
+        }
+        break;
+    
+    default:
+        break;
+    }
 }
