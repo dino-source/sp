@@ -36,4 +36,6 @@ void Solution::show_task_description() const
 void Solution::run_solution() const
 {
     // TODO: implement this member function
+    std::cout << "Here is supposed to be a solved problem, but "
+        "this functionality has not been implemented yet.\n";
 }

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-#include "../../helper_library/pointers.h"
+#include "../../../helper_library/pointers.h"
 // chapter04/online_session/ptr_example_2.h
 void play_with_ptr_wrapper();
 
