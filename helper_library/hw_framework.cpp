@@ -37,26 +37,57 @@ void Solution::show_task_description() const
     }
 }
 
+void Solution::choose_exercise_in_chapter02() const
+{
+    switch (m_exercise)
+    {
+    case 1:
+        ch02::ex01::display_name_and_address();
+        break;
+    case 2:
+        ch02::ex02::convert_furlongs_to_yards();
+        break;
+    default:
+        break;
+    }
+}
+
+void Solution::choose_exercise_in_chapter03() const
+{
+    // TODO: implements this function
+}
+
+void Solution::choose_exercise_in_chapter04() const
+{
+    // TODO: implements this function
+}
+
+void Solution::choose_exercise_in_chapter05() const
+{
+    // TODO: implements this function
+}
+
 void Solution::run_solution() const
 {
     std::cout << "===== Possible solution =====\n";
     switch (m_chapter)
     {
     case 2:
-        switch (m_exercise)
-        {
-        case 1:
-            ch02::ex01::display_name_and_address();
-            break;
-        case 2:
-            ch02::ex02::convert_furlongs_to_yards();
-            break;        
-        default:
-            break;
-        }
+        choose_exercise_in_chapter02();
         break;
-    
+    case 3:
+        choose_exercise_in_chapter03();
+        break;
+    case 4:
+        choose_exercise_in_chapter04();
+        break;
+    case 5:
+        choose_exercise_in_chapter05();
+        break;
+
     default:
+        std::cout << "Theres is no chapter number " << m_chapter
+                  << " or there is no exercises there.\n";
         break;
     }
 }
