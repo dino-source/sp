@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <functional>
 
 #include "hw_framework.h"
 #include "hw_task_descriptions.h"

@@ -13,7 +13,7 @@ struct Solution
     unsigned exercise() { return m_exercise; }
 
     void show_task_description() const;
-    void run_solution() const; // TODO: implement this member function
+    void run_solution() const;
 
 private:
     unsigned m_chapter{2u};
