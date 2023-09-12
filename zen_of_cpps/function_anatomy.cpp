@@ -24,4 +24,3 @@ void print(Message msg, char delim) // function header
     std::cout << msg << delim;      // statement
 }                                   // function body ends here
 
-

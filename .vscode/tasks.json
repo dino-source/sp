@@ -23,6 +23,7 @@
                 "-Wnoexcept",
                 "-fdiagnostics-color=always",
                 "${fileDirname}/*.cpp",
+                "${fileDirname}/../helper_library/*.cpp",
                 "-o",
                 "a.out"
             ],
