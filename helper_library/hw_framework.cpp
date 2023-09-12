@@ -14,6 +14,19 @@
 #include "../primer/chapter02/exercises/ex06/ex06.h"
 #include "../primer/chapter02/exercises/ex07/ex07.h"
 
+namespace cpps::helper_library::hw::utilities
+{
+    int get_number_of_exercises_in_chapter(int chapter)
+    {
+        std::vector<int> number_of_exercises_in_chaper{
+            7, 7, 10, 10, 9, 10, 7, 4, 8, 7, 6, 4, 5, 4, 10, 7, 4};
+        size_t index = static_cast<size_t>(chapter) - 2;
+        return number_of_exercises_in_chaper[index];
+    }
+} // namespace cpps::helper_library::hw::utilities
+
+namespace cpps::helper_library::hw::types
+{
 Solution::Solution() : m_chapter{2u}, m_exercise{1u}
 {
 }
@@ -112,3 +125,5 @@ void Solution::run_solution() const
         break;
     }
 }
+    
+} // namespace cpps::helper_library::hw::types

@@ -47,6 +47,26 @@ namespace cpps::helper_library::utilities
         std::cout << '\n';
     }
 
+    inline int get_number_from_user_in_allowed_range(
+        std::string const &message_to_user, int lower_bound, int upper_bound)
+    {
+        std::cout << message_to_user;
+        std::string user_choice;
+        std::getline(std::cin, user_choice);
+        int num = std::stoi(user_choice);
+        while (num < lower_bound || num > upper_bound)
+        {
+            std::cout << "Please choose a number greater than or equal to "
+                    << lower_bound
+                    << " and less than or equal to "
+                    << upper_bound
+                    << ".\nOther options are not allowed.\n";
+            std::getline(std::cin, user_choice);
+            num = std::stoi(user_choice);
+        }
+        return num;
+    }
+
 } // namespace cpps::helper_library::utilities
 
 #endif // HELPER_FUNCTIONS_H
