@@ -18,7 +18,6 @@
                 "-Wold-style-cast",
                 "-Wimplicit-fallthrough",
                 "-Wno-unused-parameter",
-                "-Wmissing-declarations",
                 "-Wmissing-noreturn",
                 "-Wnoexcept",
                 "-fdiagnostics-color=always",
