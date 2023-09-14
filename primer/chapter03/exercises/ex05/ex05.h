@@ -11,7 +11,7 @@ namespace ch03::ex05
 {
     inline void calculate_population()
     {
-        std::cout << "TODO: Chapter 3. Exercise 5.\n";
+        std::cout << "Chapter 3. Exercise 5. TODO: Solve the problem.\n";
     }
 } // namespace ch03::ex05
 

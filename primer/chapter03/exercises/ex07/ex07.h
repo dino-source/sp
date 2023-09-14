@@ -12,7 +12,7 @@ namespace ch03::ex07
 {
     inline void gas_per_distance_to_distance_per_gas()
     {
-        std::cout << "TODO: Chapter 3. Exercise 7.\n";
+        std::cout << "Chapter 3. Exercise 7. TODO: Solve the problem.\n";
     }
 } // namespace ch03::ex07
 

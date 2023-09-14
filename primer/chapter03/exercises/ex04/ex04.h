@@ -11,7 +11,7 @@ namespace ch03::ex04
 {
     inline void seconds_to_dhms()
     {
-        std::cout << "TODO: Chapter 3. Exercise 4.\n";
+        std::cout << "Chapter 3. Exercise 4. TODO: Solve the problem.\n";
     }
 } // namespace ch03::ex04
 

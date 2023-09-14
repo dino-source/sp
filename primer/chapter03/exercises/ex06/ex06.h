@@ -11,7 +11,7 @@ namespace ch03::ex06
 {
     inline void gasoline_per_distance()
     {
-        std::cout << "TODO: Chapter 3. Exercise 6.\n";
+        std::cout << "Chapter 3. Exercise 6. TODO: Solve the problem.\n";
     }
 } // namespace ch03::ex06
 

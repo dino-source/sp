@@ -11,7 +11,7 @@ namespace ch03::ex02
 {
     inline void calculate_bmi()
     {
-        std::cout << "TODO: Chapter 3. Exercise 2.\n";
+        std::cout << "Chapter 3. Exercise 2. TODO: Solve the problem.\n";
     }
 } // namespace ch03::ex02
 

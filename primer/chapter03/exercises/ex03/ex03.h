@@ -11,7 +11,7 @@ namespace ch03::ex03
 {
     inline void inches_to_feet_and_inches()
     {
-        std::cout << "TODO: Chapter 3. Exercise 3.\n";
+        std::cout << "Chapter 3. Exercise 3. TODO: Solve the problem.\n";
     }
 } // namespace ch03::ex03
 
