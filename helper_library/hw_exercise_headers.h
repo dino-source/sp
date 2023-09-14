@@ -97,4 +97,20 @@
 #include "../primer/chapter12/exercises/ex05/ex05.h"
 #include "../primer/chapter12/exercises/ex06/ex06.h"
 
+#include "../primer/chapter13/exercises/ex01/ex01.h"
+#include "../primer/chapter13/exercises/ex02/ex02.h"
+#include "../primer/chapter13/exercises/ex03/ex03.h"
+#include "../primer/chapter13/exercises/ex04/ex04.h"
+
+#include "../primer/chapter14/exercises/ex01/ex01.h"
+#include "../primer/chapter14/exercises/ex02/ex02.h"
+#include "../primer/chapter14/exercises/ex03/ex03.h"
+#include "../primer/chapter14/exercises/ex04/ex04.h"
+#include "../primer/chapter14/exercises/ex05/ex05.h"
+
+#include "../primer/chapter15/exercises/ex01/ex01.h"
+#include "../primer/chapter15/exercises/ex02/ex02.h"
+#include "../primer/chapter15/exercises/ex03/ex03.h"
+#include "../primer/chapter15/exercises/ex04/ex04.h"
+
 #endif // HW_EXERCISE_HEADERS_H
