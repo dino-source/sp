@@ -32,7 +32,7 @@ int main()
     {
         std::cout << "a year " << year + 1 << '\n';
 
-        for (int sales = 0; sales < MONTHS_IN_ONE_YEAR; sales++)
+        for (int sales{0}; sales < MONTHS_IN_ONE_YEAR; sales++)
         {
             std::cout << months[sales] << ": ";
             std::cin >> number_of_sold_books[year][sales];

@@ -35,10 +35,27 @@ int main()
 {
     std::cout << "How many cars do you wish for catalog? ";
     int num_of_cars;
-    std::cin >> num_of_cars;
-    int *dynamic_array = new car[num_of_cars];
+    (std::cin >> num_of_cars).get();
+    car *catalog_cars = new car[num_of_cars];
+    int car_number = 0;
 
-    std::cout << "Car #1: \n";
-    std::cout << "Please enter the brand: " << dynamic_array /*???*/;
-    std::cout << "Please enter the release year: " << ;
+    for (car_number = 0; car_number < num_of_cars; car_number++)
+    {
+        std::cout << "Car #" << car_number + 1 << ": \n";
+
+        std::cout << "Please enter the brand: ";
+        std::getline(std::cin, catalog_cars[car_number].brand);
+
+        std::cout << "Please enter the release year: ";
+        (std::cin >> catalog_cars[car_number].release_year).get();
+    }
+
+    for (car_number = 0; car_number < num_of_cars; car_number++)
+    {
+        std::cout << "Here is your collection: " << catalog_cars[car_number].brand << ", "
+                  << catalog_cars[car_number].release_year << '\n';
+    }
+
+    delete[] catalog_cars;
+    return 0;
 }
