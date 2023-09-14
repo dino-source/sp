@@ -22,6 +22,17 @@
 #include "../primer/chapter03/exercises/ex06/ex06.h"
 #include "../primer/chapter03/exercises/ex07/ex07.h"
 
+#include "../primer/chapter04/exercises/ex01/ex01.h"
+#include "../primer/chapter04/exercises/ex02/ex02.h"
+#include "../primer/chapter04/exercises/ex03/ex03.h"
+#include "../primer/chapter04/exercises/ex04/ex04.h"
+#include "../primer/chapter04/exercises/ex05/ex05.h"
+#include "../primer/chapter04/exercises/ex06/ex06.h"
+#include "../primer/chapter04/exercises/ex07/ex07.h"
+#include "../primer/chapter04/exercises/ex08/ex08.h"
+#include "../primer/chapter04/exercises/ex09/ex09.h"
+#include "../primer/chapter04/exercises/ex10/ex10.h"
+
 namespace cpps::helper_library::hw::utilities
 {
     int get_number_of_exercises_in_chapter(int chapter)
@@ -89,6 +100,18 @@ void Solution::run_solution() const
             ch03::ex05::calculate_population,
             ch03::ex06::gasoline_per_distance,
             ch03::ex07::gas_per_distance_to_distance_per_gas,
+        },
+        {
+            ch04::ex01::show_name_and_grade,
+            ch04::ex02::read_space_separated_words,
+            ch04::ex03::show_full_name,
+            ch04::ex04::show_full_name,
+            ch04::ex05::show_candy_bar,
+            ch04::ex06::show_candy_bars,
+            ch04::ex07::show_pizza_info,
+            ch04::ex08::show_pizza_info,
+            ch04::ex09::show_candy_bars,
+            ch04::ex10::show_average_result_of_three_40m_dashes,
         },
     };
     // We have to subtract 2, due to two facts:
