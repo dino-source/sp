@@ -10,7 +10,9 @@ int main()
     namespace hwu = cpps::helper_library::hw::utilities;
     namespace hwt = cpps::helper_library::hw::types;
 
-    for (std::string user_choice; user_choice != "n" || user_choice != "no";)
+    for (std::string user_choice{"y"};
+         user_choice[0] != 'n' && user_choice[0] != 'N';
+         std::getline(std::cin, user_choice))
     {
         std::string msg = "Please choose chapter (2-18): ";
         int lower_bound = 2;
@@ -27,6 +29,6 @@ int main()
         s.run_solution();
 
         std::cout << "\nWould you like run another one? (y/n): ";
-        std::getline(std::cin, user_choice);
     }
+    std::cout << "Thank you for using our program. Have a nice day!\n\n";
 }
