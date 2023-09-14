@@ -37,9 +37,8 @@ int main()
     int num_of_cars;
     (std::cin >> num_of_cars).get();
     car *catalog_cars = new car[num_of_cars];
-    int car_number = 0;
 
-    for (car_number = 0; car_number < num_of_cars; car_number++)
+    for (int car_number = 0; car_number < num_of_cars; car_number++)
     {
         std::cout << "Car #" << car_number + 1 << ": \n";
 
@@ -50,9 +49,10 @@ int main()
         (std::cin >> catalog_cars[car_number].release_year).get();
     }
 
-    for (car_number = 0; car_number < num_of_cars; car_number++)
+    std::cout << "\nHere is your collection:\n";
+    for (int car_number = 0; car_number < num_of_cars; car_number++)
     {
-        std::cout << "Here is your collection: " << catalog_cars[car_number].brand << ", "
+        std::cout << catalog_cars[car_number].brand << ", "
                   << catalog_cars[car_number].release_year << '\n';
     }
 
