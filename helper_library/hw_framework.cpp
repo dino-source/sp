@@ -122,6 +122,15 @@ void Solution::run_solution() const
             ch07::ex09::run_solution,
             ch07::ex10::run_solution,
         },
+        {
+            ch08::ex01::run_solution,
+            ch08::ex02::run_solution,
+            ch08::ex03::run_solution,
+            ch08::ex04::run_solution,
+            ch08::ex05::run_solution,
+            ch08::ex06::run_solution,
+            ch08::ex07::run_solution,
+        },
     };
     // We have to subtract 2, due to two facts:
     // 1. Indices in C arrays starts from 0
