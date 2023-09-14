@@ -11,7 +11,7 @@ namespace ch04::ex08
 {
     inline void show_pizza_info()
     {
-        std::cout << "TODO: Chapter 4. Exercise 8.\n";
+        std::cout << "Chapter 4. Exercise 8. TODO: Solve the problem.\n";
     }
 } // namespace ch04::ex08
 

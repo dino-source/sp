@@ -11,7 +11,7 @@ namespace ch04::ex02
 {
     inline void read_space_separated_words()
     {
-        std::cout << "TODO: Chapter 4. Exercise 2.\n";
+        std::cout << "Chapter 4. Exercise 2. TODO: Solve the problem.\n";
     }
 } // namespace ch04::ex02
 

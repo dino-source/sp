@@ -11,7 +11,7 @@ namespace ch04::ex01
 {
     inline void show_name_and_grade()
     {
-        std::cout << "TODO: Chapter 4. Exercise 1.\n";
+        std::cout << "Chapter 4. Exercise 1. TODO: Solve the problem.\n";
     }
 } // namespace ch04::ex01
 

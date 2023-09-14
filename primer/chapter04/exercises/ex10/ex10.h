@@ -11,7 +11,7 @@ namespace ch04::ex10
 {
     inline void show_average_result_of_three_40m_dashes()
     {
-        std::cout << "TODO: Chapter 4. Exercise 10.\n";
+        std::cout << "Chapter 4. Exercise 10. TODO: Solve the problem.\n";
     }
 } // namespace ch04::ex10
 

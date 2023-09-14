@@ -11,7 +11,7 @@ namespace ch04::ex04
 {
     inline void show_full_name()
     {
-        std::cout << "TODO: Chapter 4. Exercise 4.\n";
+        std::cout << "Chapter 4. Exercise 4. TODO: Solve the problem.\n";
     }
 } // namespace ch04::ex04
 

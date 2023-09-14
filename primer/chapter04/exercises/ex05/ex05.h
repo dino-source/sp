@@ -11,7 +11,7 @@ namespace ch04::ex05
 {
     inline void show_candy_bar()
     {
-        std::cout << "TODO: Chapter 4. Exercise 5.\n";
+        std::cout << "Chapter 4. Exercise 5. TODO: Solve the problem.\n";
     }
 } // namespace ch04::ex05
 
