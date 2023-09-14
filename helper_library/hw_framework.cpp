@@ -5,33 +5,7 @@
 
 #include "hw_framework.h"
 #include "hw_task_descriptions.h"
-
-#include "../primer/chapter02/exercises/ex01/ex01.h"
-#include "../primer/chapter02/exercises/ex02/ex02.h"
-#include "../primer/chapter02/exercises/ex03/ex03.h"
-#include "../primer/chapter02/exercises/ex04/ex04.h"
-#include "../primer/chapter02/exercises/ex05/ex05.h"
-#include "../primer/chapter02/exercises/ex06/ex06.h"
-#include "../primer/chapter02/exercises/ex07/ex07.h"
-
-#include "../primer/chapter03/exercises/ex01/ex01.h"
-#include "../primer/chapter03/exercises/ex02/ex02.h"
-#include "../primer/chapter03/exercises/ex03/ex03.h"
-#include "../primer/chapter03/exercises/ex04/ex04.h"
-#include "../primer/chapter03/exercises/ex05/ex05.h"
-#include "../primer/chapter03/exercises/ex06/ex06.h"
-#include "../primer/chapter03/exercises/ex07/ex07.h"
-
-#include "../primer/chapter04/exercises/ex01/ex01.h"
-#include "../primer/chapter04/exercises/ex02/ex02.h"
-#include "../primer/chapter04/exercises/ex03/ex03.h"
-#include "../primer/chapter04/exercises/ex04/ex04.h"
-#include "../primer/chapter04/exercises/ex05/ex05.h"
-#include "../primer/chapter04/exercises/ex06/ex06.h"
-#include "../primer/chapter04/exercises/ex07/ex07.h"
-#include "../primer/chapter04/exercises/ex08/ex08.h"
-#include "../primer/chapter04/exercises/ex09/ex09.h"
-#include "../primer/chapter04/exercises/ex10/ex10.h"
+#include "hw_exercise_headers.h"
 
 namespace cpps::helper_library::hw::utilities
 {
@@ -112,6 +86,41 @@ void Solution::run_solution() const
             ch04::ex08::show_pizza_info,
             ch04::ex09::show_candy_bars,
             ch04::ex10::show_average_result_of_three_40m_dashes,
+        },
+        {
+            ch05::ex01::run_solution,
+            ch05::ex02::run_solution,
+            ch05::ex03::run_solution,
+            ch05::ex04::run_solution,
+            ch05::ex05::run_solution,
+            ch05::ex06::run_solution,
+            ch05::ex07::run_solution,
+            ch05::ex08::run_solution,
+            ch05::ex09::run_solution,
+            ch05::ex10::run_solution,
+        },
+        {
+            ch06::ex01::run_solution,
+            ch06::ex02::run_solution,
+            ch06::ex03::run_solution,
+            ch06::ex04::run_solution,
+            ch06::ex05::run_solution,
+            ch06::ex06::run_solution,
+            ch06::ex07::run_solution,
+            ch06::ex08::run_solution,
+            ch06::ex09::run_solution,
+        },
+        {
+            ch07::ex01::run_solution,
+            ch07::ex02::run_solution,
+            ch07::ex03::run_solution,
+            ch07::ex04::run_solution,
+            ch07::ex05::run_solution,
+            ch07::ex06::run_solution,
+            ch07::ex07::run_solution,
+            ch07::ex08::run_solution,
+            ch07::ex09::run_solution,
+            ch07::ex10::run_solution,
         },
     };
     // We have to subtract 2, due to two facts:
