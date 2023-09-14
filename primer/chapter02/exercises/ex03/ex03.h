@@ -16,29 +16,26 @@
 
 #include <iostream>
 
-namespace ch02
+namespace ch02::ex03
 {
-    struct ex03
+    inline void three_blind_mice()
     {
-        void show_running_mice()
-        {
-            three_blind_mice();
-            three_blind_mice();
-            see_how_they_run();
-            see_how_they_run();
-        }
+        std::cout << "Three blind mice\n";
+    }
 
-    private:
-        void three_blind_mice()
-        {
-            std::cout << "Three blind mice\n";
-        }
+    inline void see_how_they_run()
+    {
+        std::cout << "See how they run\n";
+    }
 
-        void see_how_they_run()
-        {
-            std::cout << "See how they run\n";
-        }
-    } ex03;
-} // namespace ch02
+    inline void show_running_mice()
+    {
+        three_blind_mice();
+        three_blind_mice();
+        see_how_they_run();
+        see_how_they_run();
+    }
+
+} // namespace ch02::ex03
 
 #endif // EXERCISE_03_H

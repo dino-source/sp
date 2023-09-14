@@ -14,11 +14,14 @@
 
 #include <iostream>
 
-namespace ch02
+namespace ch02::ex07
 {
-    struct ex07
-    {
-        void show_time_in_hours_and_seconds()
+        inline void time(int number_of_hr, int number_of_min)
+        {
+            std::cout << "Time: " << number_of_hr << ":" << number_of_min << "\n";
+        }
+
+        inline void show_time_in_hours_and_seconds()
         {
             int number_of_hr;
             std::cout << "Enter the number of hours: ";
@@ -28,15 +31,7 @@ namespace ch02
             std::cin >> number_of_min;
             time(number_of_hr, number_of_min);
         }
-
-    private:
-        void time(int number_of_hr, int number_of_min)
-        {
-            std::cout << "Time: " << number_of_hr << ":" << number_of_min << "\n";
-        }
-    } ex07;
-    
-} // namespace ch02
+} // namespace ch02::ex07
 
 
 

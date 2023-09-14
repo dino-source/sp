@@ -19,29 +19,25 @@
 // 1 light year = 63,240 astronomical units
 #include <iostream>
 
-namespace ch02
+namespace ch02::ex06
 {
-    struct ex06
+    inline double light_years_to_astronomical_units(double light_years)
     {
-        void run_space_distance_units_converter()
-        {
-            double light_years;
-            std::cout << "Enter the number of light years: ";
-            std::cin >> light_years;
-            double au_number = light_years_to_astronomical_units(light_years);
-            std::cout << light_years << " light years = "
-                      << au_number << " astronomical units.\n";
-        }
+        const double ASTRONOMICAL_UNITS_IN_LIGHT_YEAR{63.240};
+        double astronomical_units = light_years * ASTRONOMICAL_UNITS_IN_LIGHT_YEAR;
+        return astronomical_units;
+    }
 
-    private:
-        double light_years_to_astronomical_units(double light_years)
-        {
-            const double ASTRONOMICAL_UNITS_IN_LIGHT_YEAR{63.240};
-            double astronomical_units = light_years * ASTRONOMICAL_UNITS_IN_LIGHT_YEAR;
-            return astronomical_units;
-        }
-    } ex06;
+    inline void run_space_distance_units_converter()
+    {
+        double light_years;
+        std::cout << "Enter the number of light years: ";
+        std::cin >> light_years;
+        double au_number = light_years_to_astronomical_units(light_years);
+        std::cout << light_years << " light years = "
+                  << au_number << " astronomical units.\n";
+    }
 
-} // namespace ch02
+} // namespace ch02::ex06
 
 #endif // EXERCISE_06_H

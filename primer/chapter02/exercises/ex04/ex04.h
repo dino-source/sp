@@ -11,24 +11,20 @@
 // Your age in months is 384.
 
 #include <iostream>
-namespace ch02
+namespace ch02::ex04
 {
-    struct ex04
+    inline void show_age_in_months()
     {
-        void show_age_in_months()
-        {
-            using namespace std;
-            const int MONTHS_IN_YEAR = 12;
-            int age_in_years;
-            int age_in_months;
-            char delimiter = '\n';
-            cout << "Please, enter your age: ";
-            cin >> age_in_years;
-            age_in_months = age_in_years * MONTHS_IN_YEAR;
-            cout << "Your age in months is " << age_in_months << delimiter;
-        }
-    } ex04;
-
-} // namespace ch02
+        using namespace std;
+        const int MONTHS_IN_YEAR = 12;
+        int age_in_years;
+        int age_in_months;
+        char delimiter = '\n';
+        cout << "Please, enter your age: ";
+        cin >> age_in_years;
+        age_in_months = age_in_years * MONTHS_IN_YEAR;
+        cout << "Your age in months is " << age_in_months << delimiter;
+    }
+} // namespace ch02::ex04
 
 #endif // EXERCISE_04_H

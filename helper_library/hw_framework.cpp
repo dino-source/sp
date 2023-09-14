@@ -27,6 +27,9 @@ namespace cpps::helper_library::hw::utilities
 
 namespace cpps::helper_library::hw::types
 {
+using fn_ptr = void (*)();
+using Solutions = std::vector<fn_ptr>;
+
 Solution::Solution() : m_chapter{2u}, m_exercise{1u}
 {
 }
@@ -56,74 +59,31 @@ void Solution::show_task_description() const
     }
 }
 
-void Solution::choose_exercise_in_chapter02() const
-{
-    switch (m_exercise)
-    {
-    case 1:
-        ch02::ex01.display_name_and_address();
-        break;
-    case 2:
-        ch02::ex02.convert_furlongs_to_yards();
-        break;
-    case 3:
-        ch02::ex03.show_running_mice();
-        break;
-    case 4:
-        ch02::ex04.show_age_in_months();
-        break;
-    case 5:
-        ch02::ex05.run_temperature_converter();
-        break;
-    case 6:
-        ch02::ex06.run_space_distance_units_converter();
-        break;
-    case 7:
-        ch02::ex07.show_time_in_hours_and_seconds();
-        break;
-    default:
-        break;
-    }
-}
-
-void Solution::choose_exercise_in_chapter03() const
-{
-    // TODO: implements this function
-}
-
-void Solution::choose_exercise_in_chapter04() const
-{
-    // TODO: implements this function
-}
-
-void Solution::choose_exercise_in_chapter05() const
-{
-    // TODO: implements this function
-}
-
 void Solution::run_solution() const
 {
     std::cout << "===== Possible solution =====\n";
-    switch (m_chapter)
+    std::vector<Solutions> solutions
     {
-    case 2:
-        choose_exercise_in_chapter02();
-        break;
-    case 3:
-        choose_exercise_in_chapter03();
-        break;
-    case 4:
-        choose_exercise_in_chapter04();
-        break;
-    case 5:
-        choose_exercise_in_chapter05();
-        break;
+        {
+            ch02::ex01::display_name_and_address,
+            ch02::ex02::convert_furlongs_to_yards,
+            ch02::ex03::show_running_mice,
+            ch02::ex04::show_age_in_months,
+            ch02::ex05::run_temperature_converter,
+            ch02::ex06::run_space_distance_units_converter,
+            ch02::ex07::show_time_in_hours_and_seconds,
+        },
+    };
+    // We have to subtract 2, due to two facts:
+    // 1. Indices in C arrays starts from 0
+    // 2. There is no exercises in chapter 1, so we start from chapter 2
+    unsigned ch_index = m_chapter - 2;
 
-    default:
-        std::cout << "Theres is no chapter number " << m_chapter
-                  << " or there is no exercises there.\n";
-        break;
-    }
+    // We have to subtract 1, because indices in C arrays start from 0
+    unsigned ex_index = m_exercise - 1;
+
+    solutions[ch_index][ex_index]();
+
 }
     
 } // namespace cpps::helper_library::hw::types

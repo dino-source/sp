@@ -16,28 +16,24 @@
 
 #include <iostream>
 
-namespace ch02
+namespace ch02::ex05
 {
-    struct ex05
+    inline double celsius_to_fahrenheit(double temperature_in_celsius)
     {
-        void run_temperature_converter()
-        {
-            int celsius_value;
-            std::cout << "Please enter a Celsius value: ";
-            std::cin >> celsius_value;
-            char delimeter = '\n';
-            double fahrenheit_value = celsius_to_fahrenheit(celsius_value);
-            std::cout << celsius_value << " degrees Celsius is "
-                      << fahrenheit_value << " degrees Fahrenheit" << delimeter;
-        }
+        double temperature_in_fahrenheit = 1.8 * temperature_in_celsius + 32.0;
+        return temperature_in_fahrenheit;
+    }
 
-        double celsius_to_fahrenheit(double temperature_in_celsius)
-        {
-            double temperature_in_fahrenheit = 1.8 * temperature_in_celsius + 32.0;
-            return temperature_in_fahrenheit;
-        }
-    } ex05;
-
-} // namespace ch02
+    inline void run_temperature_converter()
+    {
+        int celsius_value;
+        std::cout << "Please enter a Celsius value: ";
+        std::cin >> celsius_value;
+        char delimeter = '\n';
+        double fahrenheit_value = celsius_to_fahrenheit(celsius_value);
+        std::cout << celsius_value << " degrees Celsius is "
+                  << fahrenheit_value << " degrees Fahrenheit" << delimeter;
+    }
+} // namespace ch02::ex05
 
 #endif // EXERCISE_05_H

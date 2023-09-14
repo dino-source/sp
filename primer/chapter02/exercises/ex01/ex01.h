@@ -10,15 +10,12 @@
 #include <iostream>
 #include <string>
 
-namespace ch02
+namespace ch02::ex01
 {
-    struct ex01
+    inline void display_name_and_address()
     {
-        void display_name_and_address()
-        {
-            std::cout << "Name: Lada\nAddress: Lemon St.11\n";
-        }
-    } ex01;
-} // namespace ch02
+        std::cout << "Name: Lada\nAddress: Lemon St.11\n";
+    }
+} // namespace ch02::ex01
 
 #endif // EXERCISE_01_H

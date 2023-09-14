@@ -10,23 +10,20 @@
 
 #include <iostream>
 
-namespace ch02
+namespace ch02::ex02
 {
-    struct ex02
+    inline void convert_furlongs_to_yards()
     {
-        void convert_furlongs_to_yards()
-        {
-            int distance_in_furlongs;
-            constexpr int YARDS_IN_FURLONGS = 220;
+        int distance_in_furlongs;
+        constexpr int YARDS_IN_FURLONGS = 220;
 
-            std::cout << "Please enter distance in furlongs:\n";
-            std::cin >> distance_in_furlongs;
-            std::cout << '\n';
-            int distance_in_yards = distance_in_furlongs * YARDS_IN_FURLONGS;
-            std::cout << "So it's " << distance_in_yards << " yards in "
-                      << distance_in_furlongs << " furlongs.\n\n";
-        }
-    } ex02;
+        std::cout << "Please enter distance in furlongs:\n";
+        std::cin >> distance_in_furlongs;
+        std::cout << '\n';
+        int distance_in_yards = distance_in_furlongs * YARDS_IN_FURLONGS;
+        std::cout << "So it's " << distance_in_yards << " yards in "
+                    << distance_in_furlongs << " furlongs.\n\n";
+    }
 } // namespace ch02::ex02
 
 #endif // EXERCISE_02_H

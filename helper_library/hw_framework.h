@@ -25,10 +25,6 @@ namespace cpps::helper_library::hw::types
     private:
         unsigned m_chapter{2u};
         unsigned m_exercise{1u};
-        void choose_exercise_in_chapter02() const;
-        void choose_exercise_in_chapter03() const;
-        void choose_exercise_in_chapter04() const;
-        void choose_exercise_in_chapter05() const;
     };
 
 } // namespace cpps::helper_library::hw::types
