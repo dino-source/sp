@@ -25,14 +25,12 @@ namespace ch02::ex07
         {
             int number_of_hr;
             std::cout << "Enter the number of hours: ";
-            std::cin >> number_of_hr;
+            (std::cin >> number_of_hr).get();
             int number_of_min;
             std::cout << "Enter the number of minutes: ";
-            std::cin >> number_of_min;
+            (std::cin >> number_of_min).get();
             time(number_of_hr, number_of_min);
         }
 } // namespace ch02::ex07
-
-
 
 #endif // EXERCISE_07_H

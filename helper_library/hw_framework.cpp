@@ -14,6 +14,14 @@
 #include "../primer/chapter02/exercises/ex06/ex06.h"
 #include "../primer/chapter02/exercises/ex07/ex07.h"
 
+#include "../primer/chapter03/exercises/ex01/ex01.h"
+#include "../primer/chapter03/exercises/ex02/ex02.h"
+#include "../primer/chapter03/exercises/ex03/ex03.h"
+#include "../primer/chapter03/exercises/ex04/ex04.h"
+#include "../primer/chapter03/exercises/ex05/ex05.h"
+#include "../primer/chapter03/exercises/ex06/ex06.h"
+#include "../primer/chapter03/exercises/ex07/ex07.h"
+
 namespace cpps::helper_library::hw::utilities
 {
     int get_number_of_exercises_in_chapter(int chapter)
@@ -72,6 +80,15 @@ void Solution::run_solution() const
             ch02::ex05::run_temperature_converter,
             ch02::ex06::run_space_distance_units_converter,
             ch02::ex07::show_time_in_hours_and_seconds,
+        },
+        {
+            ch03::ex01::inches_to_feet_and_inches,
+            ch03::ex02::calculate_bmi,
+            ch03::ex03::inches_to_feet_and_inches,
+            ch03::ex04::seconds_to_dhms,
+            ch03::ex05::calculate_population,
+            ch03::ex06::gasoline_per_distance,
+            ch03::ex07::gas_per_distance_to_distance_per_gas,
         },
     };
     // We have to subtract 2, due to two facts:

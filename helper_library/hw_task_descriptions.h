@@ -212,12 +212,141 @@ inline Chapter chapter04 {
     "object to hold the data. (Use a built-in array if array is not available.)",
 };
 
-// This is just a temporary mock
-// TODO: remove it when actual objects will be defined
-inline Chapter chapter05, chapter06,
-    chapter07, chapter08, chapter09, chapter10, chapter11, chapter12,
-    chapter13, chapter14, chapter15, chapter16, chapter17, chapter18;
+inline Chapter chapter05 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+    "TODO: write task description for ex8",
+    "TODO: write task description for ex9",
+    "TODO: write task description for ex10",};
 
+inline Chapter chapter06 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+    "TODO: write task description for ex8",
+    "TODO: write task description for ex9",
+};
+
+inline Chapter chapter07 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+    "TODO: write task description for ex8",
+    "TODO: write task description for ex9",
+    "TODO: write task description for ex10",
+};
+
+inline Chapter chapter08 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+};
+
+inline Chapter chapter09 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+};
+
+inline Chapter chapter10 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+    "TODO: write task description for ex8",
+};
+
+inline Chapter chapter11 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+};
+
+inline Chapter chapter12 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+};
+
+inline Chapter chapter13 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+};
+
+inline Chapter chapter14 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+};
+
+inline Chapter chapter15 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+};
+
+inline Chapter chapter16 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+    "TODO: write task description for ex8",
+    "TODO: write task description for ex9",
+    "TODO: write task description for ex10",
+};
+
+inline Chapter chapter17 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+    "TODO: write task description for ex5",
+    "TODO: write task description for ex6",
+    "TODO: write task description for ex7",
+};
+
+inline Chapter chapter18 {
+    "TODO: write task description for ex1",
+    "TODO: write task description for ex2",
+    "TODO: write task description for ex3",
+    "TODO: write task description for ex4",
+};
 
 inline std::vector<Chapter> task_descriptions {
     chapter01, chapter02, chapter03, chapter04, chapter05, chapter06,

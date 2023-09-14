@@ -21,7 +21,7 @@ namespace ch02::ex04
         int age_in_months;
         char delimiter = '\n';
         cout << "Please, enter your age: ";
-        cin >> age_in_years;
+        (cin >> age_in_years).get();
         age_in_months = age_in_years * MONTHS_IN_YEAR;
         cout << "Your age in months is " << age_in_months << delimiter;
     }

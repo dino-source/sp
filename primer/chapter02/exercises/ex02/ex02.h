@@ -18,7 +18,7 @@ namespace ch02::ex02
         constexpr int YARDS_IN_FURLONGS = 220;
 
         std::cout << "Please enter distance in furlongs:\n";
-        std::cin >> distance_in_furlongs;
+        (std::cin >> distance_in_furlongs).get();
         std::cout << '\n';
         int distance_in_yards = distance_in_furlongs * YARDS_IN_FURLONGS;
         std::cout << "So it's " << distance_in_yards << " yards in "

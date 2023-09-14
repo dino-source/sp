@@ -28,7 +28,7 @@ namespace ch02::ex05
     {
         int celsius_value;
         std::cout << "Please enter a Celsius value: ";
-        std::cin >> celsius_value;
+        (std::cin >> celsius_value).get();
         char delimeter = '\n';
         double fahrenheit_value = celsius_to_fahrenheit(celsius_value);
         std::cout << celsius_value << " degrees Celsius is "
