@@ -1,9 +1,7 @@
-#ifndef EXERCISE_01_H
-#define EXERCISE_01_H
+#ifndef CHAPTER_02_EXERCISE_01_H
+#define CHAPTER_02_EXERCISE_01_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 1.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 1.
 
 // Write a C++ program that displays your name and address (or if you value your
 // privacy, a fictitious name and address).
@@ -19,4 +17,4 @@ namespace ch02::ex01
     }
 } // namespace ch02::ex01
 
-#endif // EXERCISE_01_H
+#endif // CHAPTER_02_EXERCISE_01_H

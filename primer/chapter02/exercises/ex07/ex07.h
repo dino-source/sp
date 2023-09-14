@@ -1,9 +1,7 @@
-#ifndef EXERCISE_07_H
-#define EXERCISE_07_H
+#ifndef CHAPTER_02_EXERCISE_07_H
+#define CHAPTER_02_EXERCISE_07_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 7.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 7.
 
 // Write a program that asks the user to enter an hour value and a minute value.The
 // main() function should then pass these two values to a type void function that dis-
@@ -33,4 +31,4 @@ namespace ch02::ex07
         }
 } // namespace ch02::ex07
 
-#endif // EXERCISE_07_H
+#endif // CHAPTER_02_EXERCISE_07_H

@@ -1,5 +1,5 @@
-#ifndef SIMPLE_EXAMPLE_01_H
-#define SIMPLE_EXAMPLE_01_H
+#ifndef CHAPTER_05_SIMPLE_EXAMPLE_01_H
+#define CHAPTER_05_SIMPLE_EXAMPLE_01_H
 
 #include <iostream>
 #include <vector>
@@ -35,4 +35,4 @@ namespace ch05::se01
     }
 } // namespace ch05::se01
 
-#endif // SIMPLE_EXAMPLE_01_H
+#endif // CHAPTER_05_SIMPLE_EXAMPLE_01_H

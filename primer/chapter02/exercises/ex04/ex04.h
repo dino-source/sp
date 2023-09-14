@@ -1,9 +1,7 @@
-#ifndef EXERCISE_04_H
-#define EXERCISE_04_H
+#ifndef CHAPTER_02_EXERCISE_04_H
+#define CHAPTER_02_EXERCISE_04_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 4.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 4.
 
 // Write a program that asks the user to enter his or her age.
 // The program then should display the age in months:
@@ -27,4 +25,4 @@ namespace ch02::ex04
     }
 } // namespace ch02::ex04
 
-#endif // EXERCISE_04_H
+#endif // CHAPTER_02_EXERCISE_04_H

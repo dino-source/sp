@@ -1,9 +1,7 @@
-#ifndef EXERCISE_05_H
-#define EXERCISE_05_H
+#ifndef CHAPTER_02_EXERCISE_05_H
+#define CHAPTER_02_EXERCISE_05_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 5.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 5.
 
 // Write a program that has main() call a user-defined function that takes a Celsius
 // temperature value as an argument and then returns the equivalent Fahrenheit value.
@@ -36,4 +34,4 @@ namespace ch02::ex05
     }
 } // namespace ch02::ex05
 
-#endif // EXERCISE_05_H
+#endif // CHAPTER_02_EXERCISE_05_H

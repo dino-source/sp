@@ -1,9 +1,7 @@
-#ifndef EXERCISE_03_H
-#define EXERCISE_03_H
+#ifndef CHAPTER_02_EXERCISE_03_H
+#define CHAPTER_02_EXERCISE_03_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 3.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 3.
 
 // Write a C++ program that uses three user-defined functions (counting main() as
 // one) and produces the following output:
@@ -38,4 +36,4 @@ namespace ch02::ex03
 
 } // namespace ch02::ex03
 
-#endif // EXERCISE_03_H
+#endif // CHAPTER_02_EXERCISE_03_H

@@ -1,9 +1,7 @@
-#ifndef EXERCISE_06_H
-#define EXERCISE_06_H
+#ifndef CHAPTER_02_EXERCISE_06_H
+#define CHAPTER_02_EXERCISE_06_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 6.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 6.
 
 // Write a program that has main() call a user-defined function that takes a distance
 // in light years as an argument and then returns the distance in astronomical units.
@@ -41,4 +39,4 @@ namespace ch02::ex06
 
 } // namespace ch02::ex06
 
-#endif // EXERCISE_06_H
+#endif // CHAPTER_02_EXERCISE_06_H

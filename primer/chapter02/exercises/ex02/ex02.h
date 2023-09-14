@@ -1,9 +1,7 @@
-#ifndef EXERCISE_02_H
-#define EXERCISE_02_H
+#ifndef CHAPTER_02_EXERCISE_02_H
+#define CHAPTER_02_EXERCISE_02_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 2. Exercise 2.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 2. Exercise 2.
 
 // Write a C++ program that asks for a distance in furlongs and converts it to yards.
 // (One furlong is 220 yards.)
@@ -26,4 +24,4 @@ namespace ch02::ex02
     }
 } // namespace ch02::ex02
 
-#endif // EXERCISE_02_H
+#endif // CHAPTER_02_EXERCISE_02_H
