@@ -47,13 +47,28 @@ namespace cpps::helper_library::utilities
         std::cout << '\n';
     }
 
+    bool is_in_allowed_range(std::string const &user_choice) {
+        return user_choice == "1" || user_choice == "2" || user_choice == "3" ||
+            user_choice == "4" || user_choice == "5" || user_choice == "6" ||
+            user_choice == "7" || user_choice == "8" || user_choice == "9" ||
+            user_choice == "10" || user_choice == "11" || user_choice == "12" ||
+            user_choice == "13" || user_choice == "14" || user_choice == "15" ||
+            user_choice == "16" || user_choice == "17" || user_choice == "18";
+    }
+
     inline int get_number_from_user_in_allowed_range(
         std::string const &message_to_user, int lower_bound, int upper_bound)
     {
         std::cout << message_to_user;
         std::string user_choice;
         std::getline(std::cin, user_choice);
-        int num = std::stoi(user_choice);
+        
+        int num {};
+        if (is_in_allowed_range(user_choice))
+        {
+            num = std::stoi(user_choice);
+        }
+        
         while (num < lower_bound || num > upper_bound)
         {
             std::cout << "Please choose a number greater than or equal to "
@@ -62,7 +77,10 @@ namespace cpps::helper_library::utilities
                     << upper_bound
                     << ".\nOther options are not allowed.\n";
             std::getline(std::cin, user_choice);
-            num = std::stoi(user_choice);
+            if (is_in_allowed_range(user_choice))
+            {
+                num = std::stoi(user_choice);
+            }
         }
         return num;
     }
