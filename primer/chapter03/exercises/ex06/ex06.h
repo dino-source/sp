@@ -1,9 +1,7 @@
 #ifndef CHAPTER_03_EXERCISE_06_H
 #define CHAPTER_03_EXERCISE_06_H
 
-// Stephen Prata's "C++ Primer Plus" (Sixth Edition)
-
-// Chapter 3. Exercise 6.
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 3. Exercise 6.
 
 // Task description supposed to be here
 
