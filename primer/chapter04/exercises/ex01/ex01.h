@@ -1,6 +1,8 @@
 #ifndef CHAPTER_04_EXERCISE_01_H
 #define CHAPTER_04_EXERCISE_01_H
 
+// Stephen Prata's "C++ Primer Plus" (Sixth Edition). Chapter 4. Exercise 1.
+
 // Task description supposed to be here
 
 #include <iostream>
