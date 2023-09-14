@@ -55,7 +55,7 @@ void Solution::show_task_description() const
 void Solution::run_solution() const
 {
     std::cout << "===== Possible solution =====\n";
-    std::vector<Solutions> solutions
+    std::vector<Solutions> run_solution
     {
         {
             ch02::ex01::display_name_and_address,
@@ -199,12 +199,12 @@ void Solution::run_solution() const
     // We have to subtract 2, due to two facts:
     // 1. Indices in C arrays starts from 0
     // 2. There is no exercises in chapter 1, so we start from chapter 2
-    unsigned ch_index = m_chapter - 2;
+    unsigned chapter_idx = m_chapter - 2;
 
     // We have to subtract 1, because indices in C arrays start from 0
-    unsigned ex_index = m_exercise - 1;
+    unsigned exercise_idx = m_exercise - 1;
 
-    solutions[ch_index][ex_index]();
+    run_solution[chapter_idx][exercise_idx]();
 
 }
     
