@@ -5,7 +5,7 @@
 
 namespace ch10::se01
 {
-    inline void play_with_functions()
+    inline void play_with_classes()
     {
         std::cout << "Chapter 10. Simple example 1. TODO: implement it\n";
     }
