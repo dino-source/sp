@@ -6,14 +6,15 @@
 #include "hw_framework.h"
 #include "hw_task_descriptions.h"
 #include "hw_exercise_headers.h"
+#include "common_types.h"
 
 namespace cpps::helper_library::hw::utilities
 {
-    int get_number_of_exercises_in_chapter(int chapter)
+    uint get_number_of_exercises_in_chapter(uint chapter)
     {
-        std::vector<int> number_of_exercises_in_chaper{
+        std::vector<uint> number_of_exercises_in_chaper{
             7, 7, 10, 10, 9, 10, 7, 4, 8, 7, 6, 4, 5, 4, 10, 7, 4};
-        size_t index = static_cast<size_t>(chapter) - 2;
+        uint index = chapter - 2;
         return number_of_exercises_in_chaper[index];
     }
 } // namespace cpps::helper_library::hw::utilities
@@ -27,7 +28,7 @@ Solution::Solution() : m_chapter{2u}, m_exercise{1u}
 {
 }
 
-Solution::Solution(unsigned ch, unsigned ex) : m_chapter{ch}, m_exercise{ex}
+Solution::Solution(uint ch, uint ex) : m_chapter{ch}, m_exercise{ex}
 {
 }
 
@@ -214,10 +215,10 @@ void Solution::run_solution() const
     // We have to subtract 2, due to two facts:
     // 1. Indices in C arrays starts from 0
     // 2. There is no exercises in chapter 1, so we start from chapter 2
-    unsigned chapter_idx = m_chapter - 2;
+    uint chapter_idx = m_chapter - 2;
 
     // We have to subtract 1, because indices in C arrays start from 0
-    unsigned exercise_idx = m_exercise - 1;
+    uint exercise_idx = m_exercise - 1;
 
     run_solution[chapter_idx][exercise_idx]();
 

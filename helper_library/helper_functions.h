@@ -7,47 +7,48 @@
 #include <random>
 #include <ctime>
 
+#include "common_types.h"
+
 namespace cpps::helper_library::utilities
 {
     /*
     This function is to generate random floating point number in range
     from lower_bound to upper_bound
     */
-    template <typename T>
-    [[nodiscard]] T random_number(T const &&lower_bound, T const &&upper_bound)
+    [[nodiscard]] auto random_number(auto const &&lower_bound, auto const &&upper_bound)
     {
-        static std::mt19937 generator(time(0));
+        static std::mt19937 generator(static_cast<unsigned long>(time(0)));
         std::uniform_real_distribution<> distribution(lower_bound, upper_bound);
         return distribution(generator);
     }
 
-    [[nodiscard]] std::string get_string_from_user()
+    [[nodiscard]] inline std::string get_string_from_user()
     {
         std::string user_input;
         std::cin >> user_input;
         return user_input;
     }
 
-    void print(char ch = '\n')
+    inline void print(char ch = '\n')
     {
         std::cout << ch;
     }
 
-    template <typename T>
-    void print(std::string const &msg, T const &delim = '\n')
+    void print(std::string const &msg, auto const &delim = '\n')
     {
         std::cout << msg << delim;
     }
 
-    template <typename T>
-    void print(const T &arr)
+    void print(auto const &arr)
     {
         for (const auto &elem : arr)
+        {
             std::cout << elem << ' ';
+        }
         std::cout << '\n';
     }
 
-    bool is_in_allowed_range(std::string const &user_choice) {
+    inline bool is_in_allowed_range(std::string const &user_choice) {
         return user_choice == "1" || user_choice == "2" || user_choice == "3" ||
             user_choice == "4" || user_choice == "5" || user_choice == "6" ||
             user_choice == "7" || user_choice == "8" || user_choice == "9" ||
@@ -56,17 +57,17 @@ namespace cpps::helper_library::utilities
             user_choice == "16" || user_choice == "17" || user_choice == "18";
     }
 
-    inline int get_number_from_user_in_allowed_range(
-        std::string const &message_to_user, int lower_bound, int upper_bound)
+    inline uint get_number_from_user_in_allowed_range(
+        std::string const &message_to_user, unsigned lower_bound, unsigned upper_bound)
     {
         std::cout << message_to_user;
         std::string user_choice;
         std::getline(std::cin, user_choice);
         
-        int num {};
+        uint num {};
         if (is_in_allowed_range(user_choice))
         {
-            num = std::stoi(user_choice);
+            num = static_cast<uint>(std::stoi(user_choice));
         }
         
         while (num < lower_bound || num > upper_bound)
@@ -79,7 +80,7 @@ namespace cpps::helper_library::utilities
             std::getline(std::cin, user_choice);
             if (is_in_allowed_range(user_choice))
             {
-                num = std::stoi(user_choice);
+                num = static_cast<uint>(std::stoi(user_choice));
             }
         }
         return num;

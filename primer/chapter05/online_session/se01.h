@@ -12,10 +12,10 @@
 
 namespace ch05::se01
 {
-    std::string td_header = "\n===== Task Description =====\n";
-    std::string task_description =
+    inline std::string td_header = "\n===== Task Description =====\n";
+    inline std::string task_description =
         td_header + "Print all the elements of the given vector one by one.";
-    std::string ps_header = "====== Possible solution =====";
+    inline std::string ps_header = "====== Possible solution =====";
 
     inline void play_with_loops()
     {
