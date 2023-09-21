@@ -4,7 +4,7 @@
 
 #include "../helper_library/hw_framework.h"
 #include "../helper_library/helper_functions.h"
-#include "../primer/chapter05/online_session/se03.h"
+#include "../primer/chapter06/online_session/se01.h"
 
 int main()
 {
@@ -32,6 +32,6 @@ int main()
 
     //     std::cout << "\nWould you like run another one? (y/n): ";
     // }
-    ch05::se03::play_with_loops();
+    ch06::se01::play_with_if_statements();
     std::cout << "Thank you for using our program. Have a nice day!\n\n";
 }
