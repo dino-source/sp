@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <helper_functions.h>
 
 namespace ch06::se01
 {
@@ -16,7 +17,9 @@ namespace ch06::se01
         {
             if (companies[i][0] > companies[i + 1][0])
             {
-                /* code */
+                std::string tmp{companies[i]};
+                companies[i] = companies[i + 1];
+                companies[i + 1] = tmp;
             }
         }
     }
