@@ -11,6 +11,14 @@ namespace ch06::se01
     {
         std::vector<std::string> companies{"audi", "ford", "bmw", "fiat", "kia"};
         std::vector<std::string> customers{"lada", "igor", "oleg", "alex", "jonah"};
+
+        for (std::size_t i = 0; i < companies.size() - 1; i++)
+        {
+            if (companies[i][0] > companies[i + 1][0])
+            {
+                /* code */
+            }
+        }
     }
 } // namespace ch06::se01
 
