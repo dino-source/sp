@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <helper_functions.h>
+#define in :
 
 namespace ch06::se01
 {
@@ -21,6 +21,10 @@ namespace ch06::se01
                 companies[i] = companies[i + 1];
                 companies[i + 1] = tmp;
             }
+        }
+        for (auto each_element in companies)
+        {
+            std::cout << each_element << '\n';
         }
     }
 } // namespace ch06::se01
