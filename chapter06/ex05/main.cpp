@@ -12,50 +12,51 @@
 
 #include <iostream>
 
-int tax_in_tvarps{0};
-void tax_payment_output();
+void tax_payment_output(double tax_in_tvarps);
 
 int main()
 {
+    int const TAX_LEVEL_1{5000};
+    int const TAX_LEVEL_2{15000};
+    int const TAX_LEVEL_3{35000};
+
     double const ZERO_PERCENT_TAX{0};       // first 5 000 tvarps
     double const TEN_PERCENT_TAX{0.1};      // next 10 000 tvarps
     double const FIFTEEN_PERCENT_TAX{0.15}; // next 20 000 tvarps
-    double const TWENTY_PERCENT_TAX{0.2};   // above 35 000 tvarps
+    double const TWENTY_PERCENT_TAX{0.2};   // greater than 35 000 tvarps
 
     std::cout << "Enter your income in tvarps: ";
-    int income{0};
-    std::cin >> income;
 
-    while (std::cin && income >= 0)
+    for (double income{0}, tax_in_tvarps{0};
+         std::cin >> income && income >= 0;
+         std::cout << "Next: ")
     {
-
-        if (income <= 5000)
-        {
+        if (income <= TAX_LEVEL_1)
+        { // 4000 -> tax = 0
+            // 5000 -> tax = 0
             tax_in_tvarps = ZERO_PERCENT_TAX;
-            tax_payment_output();
         }
-        else if (5000 < income <= 15000)
+        else if (TAX_LEVEL_1 < income && income <= TAX_LEVEL_2)
         {
-            tax_in_tvarps = (income - 5000) * TEN_PERCENT_TAX;
-            tax_payment_output();
+            // 14000 -> tax = (14000 - 5000)
+            tax_in_tvarps = (income - TAX_LEVEL_1) * TEN_PERCENT_TAX;
         }
-        else if (15000 < income <= 35000)
+        else if (TAX_LEVEL_2 < income && income <= TAX_LEVEL_3)
+        { // 11000 -> tax = (10000 * 0.1) + ((11000 - 10000) * 0.15)
+            tax_in_tvarps = (10000 * TEN_PERCENT_TAX) +
+                            ((income - TAX_LEVEL_2) * FIFTEEN_PERCENT_TAX);
+        }
+        else if (income > TAX_LEVEL_3)
         {
-            tax_in_tvarps = (10000 * TEN_PERCENT_TAX) + (income - 15000) * FIFTEEN_PERCENT_TAX;
-            tax_payment_output();
+            tax_in_tvarps = (10000 * TEN_PERCENT_TAX) +
+                            (20000 * FIFTEEN_PERCENT_TAX) +
+                            (income - TAX_LEVEL_3) * TWENTY_PERCENT_TAX;
         }
-        else if (income > 35000)
-        {
-            tax_in_tvarps = (10000 * TEN_PERCENT_TAX) + (20000 * FIFTEEN_PERCENT_TAX) + (income - 350000) * TWENTY_PERCENT_TAX;
-            tax_payment_output();
-        }
-        std::cout << "Next: ";
-        std::cin >> income;
+        tax_payment_output(tax_in_tvarps);
     }
-    return 0;
 }
 
-void tax_payment_output()
+void tax_payment_output(double tax_in_tvarps)
 {
     std::cout << "Your payment of tax is " << tax_in_tvarps << " tvarps.\n";
 }
