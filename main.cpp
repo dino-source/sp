@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 
-#include "../helper_library/hw_framework.h"
-#include "../helper_library/helper_functions.h"
-#include "../primer/chapter06/online_session/se01.h"
+#include "helper_library/hw_framework.h"
+#include "helper_library/helper_functions.h"
+#include "primer/chapter06/online_session/se01.h"
 
 int main()
 {
