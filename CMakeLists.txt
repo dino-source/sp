@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.22.0)
 project(sp VERSION 0.1.0 LANGUAGES CXX)
 
+include(cmake/UpdateSubmodules.cmake)
 include(CTest)
 enable_testing()
 
