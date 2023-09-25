@@ -1,3 +1,11 @@
+# Ignore executable files
 *.out
 main
+app
+
+# Ignore build folders
+build
+out
+
+# Ignore VS Code config folder
 .vscode/
