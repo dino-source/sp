@@ -11,4 +11,4 @@ out
 .vscode
 
 # Ignore Google Test folder
-external/googletest
+external
