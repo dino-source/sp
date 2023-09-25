@@ -15,3 +15,9 @@ include(CPack)
 # Add subdirectories with code
 add_subdirectory(external)
 add_subdirectory(tests)
+add_subdirectory(helper_library)
+add_subdirectory(primer)
+
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_link_directories(${PROJECT_NAME} PRIVATE src)
+target_link_libraries(${PROJECT_NAME} hw_framework)
