@@ -12,3 +12,6 @@ out
 
 # Ignore external stuff
 external
+
+# Ignore googletest folder
+external/googletest
