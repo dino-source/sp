@@ -10,8 +10,5 @@ out
 # Ignore VS Code config files
 .vscode
 
-# Ignore external stuff
-external
-
 # Ignore googletest folder
 external/googletest
