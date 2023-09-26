@@ -12,3 +12,6 @@ out
 
 # Ignore googletest folder
 external/googletest
+
+# Ignore cached stuff
+.cache
