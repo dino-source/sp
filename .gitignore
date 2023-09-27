@@ -7,8 +7,11 @@ app
 build
 out
 
-# Ignore VS Code config folder
-.vscode/
+# Ignore VS Code config files
+.vscode
 
-# Ignore external stuff
-external
+# Ignore googletest folder
+external/googletest
+
+# Ignore cached stuff
+.cache
