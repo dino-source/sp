@@ -1,7 +1,17 @@
-# Ignore build artefacts (output files):
+# Ignore executable files
 *.out
 main
 app
 
-# Ignore VS Code config folder:
+# Ignore build folders
+build
+out
+
+# Ignore VS Code config files
 .vscode
+
+# Ignore googletest folder
+external/googletest
+
+# Ignore cached stuff
+.cache
