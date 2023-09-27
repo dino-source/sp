@@ -8,25 +8,21 @@
 
 int main()
 {
-    std::string filename;
+    std::string filename{"scores.txt"};
     std::ifstream fin;
-    std::cout << "Enter name of data file: "; // scores.txt
-    std::getline(std::cin, filename);
-    fin.open(filename.c_str());
-    if (!fin.is_open())
+
+    if (fin.open(filename.c_str()); !fin.is_open())
     {
-        std::cout << "Could not open the file " << filename << '\n';
-        std::cout << "Program termimating.\n";
+        std::cout << "Could not open the file " << filename
+                  << "\nProgram terminating.\n";
         exit(EXIT_FAILURE);
     }
 
-    char ch;
     int count{};
-    fin >> ch;
-    while (fin.good())
+
+    for (char ch{}; fin.good() && fin >> ch;)
     {
         ++count;
-        fin >> ch;
     }
     std::cout << "Items read: " << count << '\n';
 
