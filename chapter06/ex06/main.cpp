@@ -43,7 +43,7 @@ int main()
     {
         if (patron[gp].donation_amount >= 10000)
         {
-            std::cout << patron[gp].name << ' ' << patron[gp].donation_amount << ' ';
+            std::cout << patron[gp].name << '\t' << patron[gp].donation_amount << '\t';
             count++;
         }
         std::cout << '\n';
@@ -65,7 +65,7 @@ int main()
         {
             if (patron[p].donation_amount < 10000)
             {
-                std::cout << patron[p].name << ' ' << patron[p].donation_amount << ' ';
+                std::cout << patron[p].name << '\t' << patron[p].donation_amount << ' ';
             }
         }
         std::cout << '\n';
