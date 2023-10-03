@@ -50,13 +50,13 @@ int main()
         (fin >> patron[i].donation_amount).get();
     }
 
-    std::cout << "\nGreat Patrons: ";
+    std::cout << "Great Patrons:\n";
     for (unsigned gp{}; gp < member; gp++)
     {
         if (patron[gp].donation_amount >= 10000)
         {
             std::cout << patron[gp].name << '\t'
-                      << patron[gp].donation_amount << std::endl;
+                      << patron[gp].donation_amount << '\n';
             count++;
         }
     }
@@ -66,7 +66,7 @@ int main()
         std::cout << "none.\n";
     }
 
-    std::cout << "Patrons: ";
+    std::cout << "\nPatrons:\n";
 
     if (count == member)
     {
