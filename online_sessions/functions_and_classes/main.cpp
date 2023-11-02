@@ -12,14 +12,27 @@ void compute_number_of_steps(int &n);
 bool is_greater_than_and_even(int a, int b);
 bool is_less_than_and_even(int a, int b); // doesn't work
 
+struct Person
+{
+    std::string name{};
+    int age{};
+
+    void show()
+    {
+        std::cout << name << ", " << age << '\n';
+    };
+};
+
 int main()
 {
-    std::vector<int> numbers{1, 48, 92, 7, 13, 5, 9};
-    auto is_less_than_and_odd = [](int a, int b){return a<b && a%2;};
-    std::sort(numbers.begin(), numbers.end(), is_less_than_and_odd);
-    for (auto i : numbers)
+    std::vector<Person> people{
+        {"Jack", 23}, {"Mary", 27}, {"Meg", 20}, {"Ray", 42}};
+    auto by_age_desc = [](Person a, Person b){return a.age > b.age ;};
+    auto by_name_asc = [](Person a, Person b){return a.name < b.name;}; 
+    std::sort(people.begin(), people.end(), by_name_asc);
+    for (auto p : people)
     {
-        std::cout << i << ' ';
+        p.show();
     }
     std::cout << '\n';
 }
