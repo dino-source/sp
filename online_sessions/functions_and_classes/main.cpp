@@ -12,6 +12,19 @@ void compute_number_of_steps(int &n);
 bool is_greater_than_and_even(int a, int b);
 bool is_less_than_and_even(int a, int b); // doesn't work
 
+template <typename T>
+void xor_swap(T &x, T &y);
+
+template <typename T>
+void xor_swap(T &x, T &y)
+{
+    if (&x != &y) { //ensure that memory locations are different
+       x ^= y; // x = x ^ y; // x = 1000 ^ 0111 = 1111;
+       y ^= x; // y = y ^ x; // y = 0111 ^ 1111 = 1000;
+       x ^= y; // x = x ^ y; // x = 1111 ^ 1000 = 0111;
+    }
+}
+
 struct Person
 {
     std::string name{};
@@ -29,12 +42,26 @@ int main()
         {"Jack", 23}, {"Mary", 27}, {"Meg", 20}, {"Ray", 42}};
     auto by_age_desc = [](Person a, Person b){return a.age > b.age ;};
     auto by_name_asc = [](Person a, Person b){return a.name < b.name;}; 
-    std::sort(people.begin(), people.end(), by_name_asc);
+    std::ranges::sort(people, by_name_asc);
     for (auto p : people)
     {
         p.show();
     }
+
+    auto & students = people;
+    std::ranges::sort(students, by_age_desc);
     std::cout << '\n';
+    for (auto p : people)
+    {
+        p.show();
+    }
+
+    std::cout << '\n';
+    int x{8}; // = 1000
+    int y{7}; // = 0111
+    std::cout << "x = " << x << "\ny = " << y << '\n';
+    xor_swap(x, y); 
+    std::cout << "x = " << x << "\ny = " << y << '\n';
 }
 
 void reverse(std::string &s)
